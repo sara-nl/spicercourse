@@ -22,6 +22,8 @@ Anyone who wants to start processing large data volumes (tens to hundreds of ter
 
 **When**: 13:00-17:00 28 August 2019 (Wednesday)
 
+**Registration**: https://sara-nl.github.io/2019-08-28-htdp-elixir/
+
 **Program**:
 --------
 13:00 - Introduction to the high throughput platform
