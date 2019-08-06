@@ -86,7 +86,7 @@ Let us also download the reference genome for E. coli REL606.
  gunzip ecoli_rel606.fasta.gz
  ```
 
-### <a name="job-submit"></a> 3. Software management
+### <a name="spider-sm"></a> 3. Software management
 
 #### 3.1 Software manager Role
 
