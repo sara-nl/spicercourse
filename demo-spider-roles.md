@@ -241,7 +241,7 @@ cd /project/spidercourse/Data/ecoli-analysis/
 # As a regular user
 cd $HOME/ecoli-analysis
 
-wget https://raw.githubusercontent.com/sara-nl/2019-08-28-htdp-elixir/gh-pages/_episodes/scripts/job-submit-datatrimming.sh
+wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/job-submit-datatrimming.sh
  
 cat job-submit-datatrimming.sh
 
@@ -259,7 +259,7 @@ cat job-submit-datatrimming.sh
 Let us download the data_qc.sh script inspect what steps we follow in the data trimming:
 
 ```sh
-wget https://raw.githubusercontent.com/sara-nl/2019-08-28-htdp-elixir/gh-pages/_episodes/scripts/data_qc.sh
+wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/data_qc.sh
 
 cat data_qc.sh 
 
