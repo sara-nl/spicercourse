@@ -6,7 +6,7 @@
 3. [Handling errors](#error-handling)
 4. [Sharing results in a project](#share-data)
 
-### <a name="spider-spaces"></a> 1. Set up job environment
+### <a name="job-setup"></a> 1. Set up job environment
 
 We will download a set of trimmed FASTQ files to work with. These are small subsets of our real trimmed data we prepared earlier, and will enable us to run our variant calling workflow quite quickly. Later on if you have more time, you can try using the full data.
 
@@ -41,7 +41,7 @@ cd /project/spidercourse/Data/ecoli-analysis/
 cd $HOME/ecoli-analysis/
 
 mkdir results
-wget https://raw.githubusercontent.com/sara-nl/2019-08-28-htdp-elixir/gh-pages/_episodes/scripts/job-submit-variant-calling.sh
+wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/job-submit-variant-calling.sh
 ```
 
 Let us inspect the contents of the script that will run the job of variant calling
@@ -58,7 +58,7 @@ bash /project/spidercourse/Data/ecoli-analysis/run-variant-calling.sh
 The job script in turn calls another script that will run the variant calling. Let us dwonload that script first
 
 ```sh
-wget https://raw.githubusercontent.com/sara-nl/2019-08-28-htdp-elixir/gh-pages/_episodes/scripts/run-variant-calling.sh
+wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/run-variant-calling.sh
 ```
 ### <a name="run-var-call"></a> 2. Run variant calling jobs
 
