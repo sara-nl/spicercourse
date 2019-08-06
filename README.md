@@ -30,7 +30,7 @@ Anyone who wants to start processing large data volumes (tens to hundreds of ter
 
 13:30 - [Login to the platform](https://github.com/sara-nl/spidercourse/blob/master/login-to-spider.md)
 
-14:00 - [Data manager and software manager roles](https://github.com/sara-nl/2019-08-28-htdp-elixir/blob/gh-pages/_episodes/demo-spider-roles.md)
+14:00 - [Data manager and software manager roles](https://github.com/sara-nl/spidercourse/blob/master/demo-spider-roles.md)
 
 15:00 - Coffee
 
