@@ -38,7 +38,7 @@ Familiarize yourself with your environment :
 Let us download our first job script and inspect it:
   
  ```sh
- wget https://raw.githubusercontent.com/sara-nl/spidercourse/blob/master/scripts/my-first-job.sh
+ wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/my-first-job.sh
 
  cat my-first-job.sh
  
