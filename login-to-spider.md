@@ -14,7 +14,7 @@ The login credentials (e.g., spidercourse-g01) will be  provided to you at the s
  ssh username@spider.surfsara.nl #replace `username` with the username assigned to you
  ```
   
-### <a name="cartesius-env"></a> 2. Get familiar with the login node
+### <a name="spider-env"></a> 2. Get familiar with the login node
 
 Familiarize yourself with your environment :
 
@@ -38,7 +38,7 @@ Familiarize yourself with your environment :
 Let us download our first job script and inspect it:
   
  ```sh
- wget https://raw.githubusercontent.com/sara-nl/2019-08-28-htdp-elixir/gh-pages/_episodes/scripts/my-first-job.sh
+ wget https://raw.githubusercontent.com/sara-nl/spidercourse/blob/master/scripts/my-first-job.sh
 
  cat my-first-job.sh
  
