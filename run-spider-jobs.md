@@ -248,4 +248,4 @@ sacct --format=JobID,JobName,AveCPU,Elapsed  # sacc displays accounting data for
 > * How much time do you estimate your typical workflow will take to run on Spider - at the moment it has 240 cores?
 > * How can your work benefit from running on Spider e.g., with project spaces, public views? In the enxt session we will demonstrate yet more features on Spider
 
-There are some extra examples [here](https://github.com/sara-nl/2019-08-28-htdp-elixir/blob/gh-pages/_episodes/extras/extras.md) if you have already finished the previous examples and would like to explore more.
+There are some extra examples [here](https://github.com/sara-nl/spidercourse/master/extras/) if you have already finished the previous examples and would like to explore more.
