@@ -7,8 +7,9 @@ you can copy input/output to/from the local scratch.
 
 ```sh
 cd $HOME/ecoli-analysis
-wget https://raw.githubusercontent.com/sara-nl/2019-08-28-htdp-elixir/gh-pages/_episodes/scripts/job-submit-variant-calling-tmpdir.sh
-wget https://raw.githubusercontent.com/sara-nl/2019-08-28-htdp-elixir/gh-pages/_episodes/scripts/run-variant-calling-tmpdir.sh
+wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/job-submit-variant-calling-tmpdir.sh
+
+wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/run-variant-calling-tmpdir.sh
 ```
 The workflow is the same as we ran in the previous example, except first we copy the files and scripts to the local scratch space on the worker node where your job lands. Let us inspect these scripts and see the difference with the previous example.
 
