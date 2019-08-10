@@ -115,4 +115,4 @@ sbatch --job-name=var-call-singularity -J 'var-call-singularity' --output=%x-%j.
 
 Did the analysis run successfully? You got the same results with the container without setting a single path for your software! 
 
-Wondering how the container was built? You can find the recipe [here](wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/extras/singularity-recipe). This container was built on Singularity version 3.2.1-1 (on macOS Mojave running Vagrant). Using containers is simple but you should bear in mind that it should be properly built with all the required dependencies, and should be updated regularly and tested in the runtime environment. 
+Wondering how the container was built? You can find the recipe [here](https://raw.githubusercontent.com/sara-nl/spidercourse/master/extras/singularity-recipe). This container was built on Singularity version 3.2.1-1 (on macOS Mojave running Vagrant). Using containers is simple but you should bear in mind that it should be properly built with all the required dependencies, and should be updated regularly and tested in the runtime environment. 
