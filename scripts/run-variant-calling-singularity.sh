@@ -2,9 +2,7 @@
 set -e
 ecolipath=$HOME/ecoli-analysis
 
-cd $ecolipath
-mkdir $SLURM_JOBID-results
-cd $SLURM_JOBID-results
+cd $ecolipath/results
 
 genome=$ecolipath/data/ref_genome/ecoli_rel606.fasta
 
