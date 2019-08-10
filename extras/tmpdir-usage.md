@@ -79,7 +79,7 @@ for fq1 in $ecolipath/data/trimmed_fastq_small/*_1.trim.sub.fastq
    
     done
 
-cp -r $PWD/results $HOME/ecoli-analysis/
+cp -r $TMPDIR/var-calling/results $HOME/ecoli-analysis/
 ```
 Here we copy the input data to the $TMPDIR. The parent paths are redefined and hence the rest of the workflow remains the same. In the end we copy the output to our $HOME directory as the $TMPDIR is removed after thew job finishes amd we will lose our results. You can run this example and compare if the performance was better/worse/equivalent to the performance with the jobs when the data is in project spaces.
 
