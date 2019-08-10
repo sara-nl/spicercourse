@@ -3,10 +3,10 @@
 
 So far you ran your analysis with software that was installed either by the software manager or yourself. What if you want to run 
 the same analysis on another system? Or you want to simply test some workflow on Spider but don't want to install the  necessary software from scratch? This is where
-container can come in extremely handy. As you do not have admin rights on the system we do not support running Docker images
-but we do support singularity! Let us run the same analysis but by importing software from a singularit container.
+containers can come in extremely handy. As you do not have admin rights on the system, we do not support Docker containers
+but we do support Singularity containers! Let us run the same analysis but by importing software from a singularity  container.
 
-Let us first see what version of singularity is available on the system
+Let us first inspect what version of singularity is available on the system
 
 ```sh
 singularity version
@@ -35,12 +35,80 @@ fastqc -h
 trimmomatic
 ```
 
-This will throw errors which means that the software is no longer available to you. Let us now set up the scripts to use 
-the Singularity containers
+This will throw errors which means that the software is no longer available to you. Let us now download the scripts to run jobs that will use the Singularity containers
 
+```sh
+cd $HOME/ecoli-analysis
+wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/job-submit-variant-calling-singularity.sh
+
+wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/run-variant-calling-singularity.sh
+```
+
+Let us see how the scripts set the software environment. The job-submit-variant-calling-singularit.sh script stays the same as we do not set the software environemnt here. So, let us inspect the script that runs the analysis
+
+```sh
+cat run-variant-calling-singularity.sh
+
+#!/bin/bash
+set -e
+ecolipath=$HOME/ecoli-analysis
+
+cd $ecolipath/results
+
+genome=$ecolipath/data/ref_genome/ecoli_rel606.fasta
+
+singularity exec $HOME/ecoli-analysis/elixir-singularity.sif bwa index $genome
+
+mkdir -p sam bam bcf vcf
+
+for fq1 in $ecolipath/data/trimmed_fastq_small/*_1.trim.sub.fastq
+    do
+    echo "working with file $fq1"
+
+    base=$(basename $fq1 _1.trim.sub.fastq)
+    echo "base name is $base"
+
+    fq1=$ecolipath/data/trimmed_fastq_small/${base}_1.trim.sub.fastq
+    fq2=$ecolipath/data/trimmed_fastq_small/${base}_2.trim.sub.fastq
+    sam=$ecolipath/$SLURM_JOBID-results/sam/${base}.aligned.sam
+    bam=$ecolipath/$SLURM_JOBID-results/bam/${base}.aligned.bam
+    sorted_bam=$ecolipath/$SLURM_JOBID-results/bam/${base}.aligned.sorted.bam
+    raw_bcf=$ecolipath/$SLURM_JOBID-results/bcf/${base}_raw.bcf
+    variants=$ecolipath/$SLURM_JOBID-results/bcf/${base}_variants.vcf
+    final_variants=$ecolipath/$SLURM_JOBID-results/vcf/${base}_final_variants.vcf 
+    
+    #Align reads to reference genome
+    singularity exec $HOME/ecoli-analysis/elixir-singularity.sif bwa mem $genome $fq1 $fq2 > $sam
+    
+    #Convert from sam to bam format
+    singularity exec $HOME/ecoli-analysis/elixir-singularity.sif samtools view -S -b $sam > $bam
+
+    #Sort the bam files    
+    singularity exec $HOME/ecoli-analysis/elixir-singularity.sif samtools sort -o $sorted_bam $bam 
+    
+    #Calculate the read coverage of positions in the genome
+    singularity exec $HOME/ecoli-analysis/elixir-singularity.sif bcftools mpileup -O b -o $raw_bcf -f $genome $sorted_bam
+    
+    #Detect the single nucleotide polymorphisms (SNPs)
+    singularity exec $HOME/ecoli-analysis/elixir-singularity.sif bcftools call --ploidy 1 -m -v -o $variants $raw_bcf 
+    
+    #Filter the SNPs for the final output in VCF format
+    singularity exec $HOME/ecoli-analysis/elixir-singularity.sif vcfutils.pl varFilter $variants > $final_variants
+   
+    done
+ ```
 
 > **_Food for brain:_**
 >
-> * What does the time command do? How do you interpret the output?
-> * You need to rerun the previous example with data in the project space by adding the 'time' command.
-> * Does the $TMPDIR example have better performance? When is it advantageous to use it?
+> * How is the software environment set up in the above script?
+> * Does it matter where the singularity image is located?
+> * Can you install some new software in this container? 
+
+```
+#Copy the container in your $HOME
+
+cp /project/spidercourse/Software/elixir-singularity.sif  $HOME/ecoli-analysis
+
+#Make sure the path to store the results in the variant calling script does not already have the results when you run the job
+sbatch --job-name=var-call-singularity -J 'var-call-singularity' --output=%x-%j.out job-submit-variant-calling-singularity.sh
+```
