@@ -19,12 +19,12 @@ for fq1 in $ecolipath/data/trimmed_fastq_small/*_1.trim.sub.fastq
 
     fq1=$ecolipath/data/trimmed_fastq_small/${base}_1.trim.sub.fastq
     fq2=$ecolipath/data/trimmed_fastq_small/${base}_2.trim.sub.fastq
-    sam=$ecolipath/$SLURM_JOBID-results/sam/${base}.aligned.sam
-    bam=$ecolipath/$SLURM_JOBID-results/bam/${base}.aligned.bam
-    sorted_bam=$ecolipath/$SLURM_JOBID-results/bam/${base}.aligned.sorted.bam
-    raw_bcf=$ecolipath/$SLURM_JOBID-results/bcf/${base}_raw.bcf
-    variants=$ecolipath/$SLURM_JOBID-results/bcf/${base}_variants.vcf
-    final_variants=$ecolipath/$SLURM_JOBID-results/vcf/${base}_final_variants.vcf 
+    sam=$ecolipath/results/sam/${base}.aligned.sam
+    bam=$ecolipath/results/bam/${base}.aligned.bam
+    sorted_bam=$ecolipath/results/bam/${base}.aligned.sorted.bam
+    raw_bcf=$ecolipath/results/bcf/${base}_raw.bcf
+    variants=$ecolipath/results/bcf/${base}_variants.vcf
+    final_variants=$ecolipath/results/vcf/${base}_final_variants.vcf 
     
     #Align reads to reference genome
     singularity exec $HOME/ecoli-analysis/elixir-singularity.sif bwa mem $genome $fq1 $fq2 > $sam
