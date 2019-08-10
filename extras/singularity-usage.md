@@ -10,10 +10,10 @@ Let us first see what version of singularity is available on the system
 
 ```sh
 singularity version
-3.1.0-1.osgup.el7
 ```
-In this example we will directly provide you a read-only singularity image and run the same workflow. You may first want to reset
-the software environment that was set up earlier. 
+
+In this example we will directly provide you a read-only singularity image and run the same workflow. Let us get started with resetting 
+the software environment that was used earlier. 
 
 ```sh
 cd $HOME
@@ -28,14 +28,14 @@ nano .bashrc
 exit
 ```
 
-Please login to Spider again and check if the previously used sofgtware is still available to you
+Please login to Spider again and check if the previously used software is still available to you
 
 ```
 fastqc -h
 trimmomatic
 ```
 
-This will throw errors which means thatt he software is no longer available to you. Let us now set up the scripts to use 
+This will throw errors which means that the software is no longer available to you. Let us now set up the scripts to use 
 the Singularity containers
 
 
