@@ -2,7 +2,7 @@
 
 
 So far you ran your analysis with software that was installed either by the software manager or yourself. What if you want to run 
-the same analysis on another system? Or you want to test some workflow on SPider but don't want to install the software? This is where
+the same analysis on another system? Or you want to simply test some workflow on Spider but don't want to install the  necessary software from scratch? This is where
 container can come in extremely handy. As you do not have admin rights on the system we do not support running Docker images
 but we do support singularity! Let us run the same analysis but by importing software from a singularit container.
 
