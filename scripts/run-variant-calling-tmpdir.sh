@@ -44,5 +44,5 @@ for fq1 in $ecolipath/data/trimmed_fastq_small/*_1.trim.sub.fastq
     vcfutils.pl varFilter $variants > $final_variants
    
     done
-
-cp -r $PWD/results $HOME/ecoli-analysis/
+    
+cp -r $TMPDIR/var-calling/results $HOME/ecoli-analysis/
