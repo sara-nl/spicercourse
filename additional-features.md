@@ -7,4 +7,4 @@
 5. Softdrive (ND - if possible)
 6. Containers (try to run the same analysis with the container) (MK)
 7. tmpdir (MK)
-8. fio example tmpdir cephfs (RO - for advisors pilot)
+8. fio example tmpdir cephfs (RO - for advisors pilot) also add massive scaling - pretty graphs
