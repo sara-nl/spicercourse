@@ -1,4 +1,4 @@
-### Accessing data from SURfsara's large dCache storage system (magnetic tape storage and hard disk)
+### Accessing data from SURfsara's dCache storage system 
 
 You can download data on Spider before you start your analysis. However if you need to analyse data in excess of hundreds of TBs,
 wouldn't it be convenient to simply download the data to be analysed on the fly? This can be achived thanks to SURFsara's large 
