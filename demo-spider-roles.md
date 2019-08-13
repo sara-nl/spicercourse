@@ -43,24 +43,31 @@ Let us use come handy commands that can tell you which 'groups' different users 
  mkdir /project/spidercourse/Data/mydata
  ```
  
-What happened? As you are not a data manager (so not a part of spider_data group) but a user (part of spider_user group), you do not have write permissions in the project's Data directory. However, all users have read permissions. This means data is managed by a 'data manager' and can be shared within the project without worrying about regular users accidentally deleting/overwriting the data for the project.
+What happened? As you are not a data manager :information_desk_person: (so not a part of spider_data group) but a user (part of spider_user group), you do not have write permissions in the project's Data directory. However, all users have read permissions. This means data is managed by a 'data manager' and can be shared within the project without worrying about regular users accidentally deleting/overwriting the data for the project.
 
 #### 2.2 Data download
 
 Let us download some data that we will use later to run jobs on Spider. The data we are going to use is part of a long-term evolution experiment led by [Richard Lenski](https://en.wikipedia.org/wiki/E._coli_long-term_evolution_experiment) to assess adaptation in E. coli. A population was propagated for more than 50,000 generations in a glucose-limited minimal medium. We will be working with three sample events from the Ara-3 strain of this experiment, one from 5,000 generations, one from 15,000 generations, and one from 50,000 generations to study how the population changed. 
 
-Let us download the paired-end data from [European Nucleotide Archive](https://www.ebi.ac.uk/ena). Below are two set of instructions - one for Data manager and one for regular user.
+Let us download the paired-end data from [European Nucleotide Archive](https://www.ebi.ac.uk/ena). The specific instructions for Data manager or regular users are marked accordingly, the generic instructions should be followed by everyone. 
+
+:information_desk_person: As Data manager
 
  ```sh
- 
- #As Data manager
  mkdir -p /project/spidercourse/Data/ecoli-analysis/data/untrimmed_fastq/
  cd /project/spidercourse/Data/ecoli-analysis/data/untrimmed_fastq/
+ ```
  
- #As regular user
+:construction_worker: As regular user
+ 
+ ```sh
  mkdir -p $HOME/ecoli-analysis/data/untrimmed_fastq/
  cd $HOME/ecoli-analysis/data/untrimmed_fastq/
+ ```
 
+Let us now download the data
+
+ ```sh
  curl -O ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/004/SRR2589044/SRR2589044_1.fastq.gz
  curl -O ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/004/SRR2589044/SRR2589044_2.fastq.gz
  curl -O ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/003/SRR2584863/SRR2584863_1.fastq.gz
@@ -71,17 +78,24 @@ Let us download the paired-end data from [European Nucleotide Archive](https://w
 
 Let us also download the reference genome for E. coli REL606.
 
+:information_desk_person: As Data manager
+
  ```sh
- #As Data manager
  cd /project/spidercourse/Data/ecoli-analysis/data
  mkdir ref_genome
  cd ref_genome
+ ```
  
- #As regular user
+:construction_worker: As regular user
+ 
+ ```sh
+ 
  cd $HOME/ecoli-analysis/data
  mkdir ref_genome
  cd ref_genome
+ ```
  
+ ```sh
  curl -L -o ecoli_rel606.fasta.gz ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/017/985/GCA_000017985.1_ASM1798v1/GCA_000017985.1_ASM1798v1_genomic.fna.gz
  gunzip ecoli_rel606.fasta.gz
  ```
@@ -104,7 +118,7 @@ Let us also download the reference genome for E. coli REL606.
  mkdir /project/spidercourse/Software/mysoftware
  ```
  
-What happened? As you are not a Software manager (so not a part of the spider_sw group), you do not have write permissions in the project's Software directory. However, all users still have read permissions. This means that you or one of your colleagues in this role can install complicated software and the dependencies, maintain it, and all project users can use that uniformly. This makes life easier and is crucial for reproducability of your results. Also, apart from project wide software, individual users can install their own software (or different versions) as you shall see below. 
+What happened? As you are not a Software manager :construction_worker: (so not a part of the spider_sw group), you do not have write permissions in the project's Software directory. However, all users still have read permissions. This means that you or one of your colleagues in this role can install complicated software and the dependencies, maintain it, and all project users can use that uniformly. This makes life easier and is crucial for reproducability of your results. Also, apart from project wide software, individual users can install their own software (or different versions) as you shall see below. 
 
 #### 3.2 Miniconda installation
 
