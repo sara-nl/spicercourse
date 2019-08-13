@@ -26,14 +26,14 @@ Anyone who wants to start processing large data volumes (tens to hundreds of ter
 
 **Program**:
 --------
-13:00 - Introduction to the high throughput platform
+13:00 - 13:30 - Introduction to the high throughput platform
 
-13:30 - [Login to the platform](https://github.com/sara-nl/spidercourse/blob/master/login-to-spider.md)
+13:30 - 13:45 - [Login to the platform](https://github.com/sara-nl/spidercourse/blob/master/login-to-spider.md)
 
-14:00 - [Data manager and software manager roles](https://github.com/sara-nl/spidercourse/blob/master/demo-spider-roles.md)
+13:45 - 14:45 - [Data manager and software manager roles](https://github.com/sara-nl/spidercourse/blob/master/demo-spider-roles.md)
 
-15:00 - Coffee
+14:45 - 15:00 - Coffee
 
-15:15 - [Running data analysis and using collaboration features](https://github.com/sara-nl/spidercourse/blob/master/run-spider-jobs.md)
+15:00 - 16:15 - [Running data analysis and using collaboration features](https://github.com/sara-nl/spidercourse/blob/master/run-spider-jobs.md)
 
-16:15 - [Additional features on the platform and conclusion](https://github.com/sara-nl/spidercourse/blob/master/additional-features.md)
+16:15 - 17:00 [Additional features on the platform and conclusion](https://github.com/sara-nl/spidercourse/blob/master/additional-features.md)
