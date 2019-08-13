@@ -1,6 +1,6 @@
 ### Accessing data from SURfsara's dCache storage system 
 
-You can download data on Spider before you start your analysis. However, if you need to analyse data in excess of hundreds of TBs,
+You can download your raw data on Spider before you start your analysis. However, if you need to analyse data in excess of hundreds of TBs,
 wouldn't it be convenient to simply download the data to be analysed on the fly? This can be achieved thanks to SURFsara's large 
 storage system (hard disk storage with tape backend) that provides excellent network connection (upto 1200 Gbit/s) to Spider. 
 Here we will run a job where you will download the data directly on the worker node within the job, run the analysis and push the output to your home directory.
@@ -26,7 +26,7 @@ cd "$TMPDIR"/var-calling
 
 cp $HOME/ecoli-analysis/run-variant-calling-dcache.sh .
 
-bash run-variant-calling-tmpdir.sh 
+bash run-variant-calling-dcache.sh 
 ```
 
 Here we first created a directory with the help of a globally defined variable $TMPDIR. This directory will be created at 
@@ -47,13 +47,12 @@ ecolipath=$PWD
 
 mkdir -p data/ref_genome
 cp $HOME/ecoli-analysis/data/ref_genome/ecoli_rel606.fasta data/ref_genome/
-ls data/ref_genome
 
-mkdir data/trimmed_fastq_small
-cp $HOME/ecoli-analysis/data/trimmed_fastq_small/*fastq data/trimmed_fastq_small/
-ls data/trimmed_fastq_small
+cd data/
+curl https://webdav.grid.surfsara.nl:2880/?authz=MDAxY2xvY2F0aW9uIE9wdGlvbmFsLmVtcHR5CjAwMThpZGVudGlmaWVyIDVMdFI5S29QCjAwMzJjaWQgaWQ6NDM2MzI7NDEzODUsNDQ0MzYsNDI1MjksMzAwMTM7bWFpdGhpbGsKMDAyOGNpZCBiZWZvcmU6MjAxOS0wOS0xMlQxMDoxMzoyNy42NzVaCjAwNWFjaWQgcm9vdDovcG5mcy9ncmlkLnNhcmEubmwvZGF0YS9sc2dyaWQvU1VSRnNhcmEvc3BpZGVyY291cnNlL3RyaW1tZWRfZmFzdHFfc21hbGwudGFyCjAwMWZjaWQgYWN0aXZpdHk6RE9XTkxPQUQsTElTVAowMDJmc2lnbmF0dXJlIGL5MfchTf7sH1Ela025OBtIiYmsB3LAbutPyTbgW73yCg --output trimmed_fastq_small.tar
+tar xvf trimmed_fastq_small.tar
 
-mkdir results-dcache
+mkdir $ecolipath/results-dcache
 cd $ecolipath/results-dcache
 
 genome=$ecolipath/data/ref_genome/ecoli_rel606.fasta
