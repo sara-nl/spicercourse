@@ -41,15 +41,9 @@ Let us download our first job script and inspect it:
  wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/my-first-job.sh
 
  cat my-first-job.sh
- 
- #!/bin/bash
- #SBATCH -t 10:00
- #SBATCH -c 1
- #SBATCH --constraint=skylake
- sinfo
- squeue
- echo "You just ran your first job on" $HOSTNAME " with a job ID " $SLURM_JOBID
  ```
+ The #SBATCH flags that you see in the script have the following function:
+ 
  -t: max total run time of the job, here it is 10 minutes  
  -c: 1 core requested   
  --constraint: here we request nodes with skylake processors and ssd local scratch disk space
