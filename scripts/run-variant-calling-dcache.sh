@@ -27,12 +27,12 @@ for fq1 in $ecolipath/data/trimmed_fastq_small/*_1.trim.sub.fastq
 
     fq1=$ecolipath/data/trimmed_fastq_small/${base}_1.trim.sub.fastq
     fq2=$ecolipath/data/trimmed_fastq_small/${base}_2.trim.sub.fastq
-    sam=$ecolipath/results/sam/${base}.aligned.sam
-    bam=$ecolipath/results/bam/${base}.aligned.bam
-    sorted_bam=$ecolipath/results/bam/${base}.aligned.sorted.bam
-    raw_bcf=$ecolipath/results/bcf/${base}_raw.bcf
-    variants=$ecolipath/results/bcf/${base}_variants.vcf
-    final_variants=$ecolipath/results/vcf/${base}_final_variants.vcf 
+    sam=$ecolipath/results-dcache/sam/${base}.aligned.sam
+    bam=$ecolipath/results-dcache/bam/${base}.aligned.bam
+    sorted_bam=$ecolipath/results-dcache/bam/${base}.aligned.sorted.bam
+    raw_bcf=$ecolipath/results-dcache/bcf/${base}_raw.bcf
+    variants=$ecolipath/results-dcache/bcf/${base}_variants.vcf
+    final_variants=$ecolipath/results-dcache/vcf/${base}_final_variants.vcf 
 
     bwa mem $genome $fq1 $fq2 > $sam
     samtools view -S -b $sam > $bam
