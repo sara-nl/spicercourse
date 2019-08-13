@@ -1,9 +1,9 @@
 ### Accessing data from SURfsara's dCache storage system 
 
-You can download data on Spider before you start your analysis. However if you need to analyse data in excess of hundreds of TBs,
-wouldn't it be convenient to simply download the data to be analysed on the fly? This can be achived thanks to SURFsara's large 
+You can download data on Spider before you start your analysis. However, if you need to analyse data in excess of hundreds of TBs,
+wouldn't it be convenient to simply download the data to be analysed on the fly? This can be achieved thanks to SURFsara's large 
 storage system (hard disk storage with tape backend) that provides excellent network connection (upto 1200 Gbit/s) to Spider. 
-Here we will run a job where you will download the data within a job, run the analysis and push the output to your project space.
+Here we will run a job where you will download the data directly on the worker node within the job, run the analysis and push the output to your home directory.
 
 ```sh
 cd $HOME/ecoli-analysis
@@ -98,7 +98,8 @@ cp -r $TMPDIR/var-calling/results-dcache $HOME/ecoli-analysis/
 > * Dosen't look like it requires any authentication. What if your data cannot be publicly made available?
 
 The Ecoli probably do not mind their data being public but we are all very aware of data privacy - and this is not the case only for genomic data
-but research data in most domains. So how was the authnetication performed for your inout data? Try copying the link in your email
-and accessing it via a browser in a week from now!
+but research data in most domains. So how was the authnetication performed for your input data? 
 
-The data was shared with you with Macaroons - 
+The data was shared with you with Macaroons - these are bearer tokens that you can use to authorize someone to dwonload/upload/delete data stored on dCache. These macaroons can be used with clients that can support bearer tokens (e.g., curl, Rclone). For this exercise a macaroon was created with certain restrictions (called as caveats) on the lifetime of the macaroon, the IP address you can use the macaroon from, the file that you can access, etc. Depending on who you want to share the data with, for how long and from which systems, these caveats can be adjusted. 
+
+You can download data on the fly (if you have good netowrk connectivity to the storage system from Spider) within each job without the hassle of downloading all the data to Spider. This is particularly handy if you want to automate large scale data analysis. In this example we saved the data locally on Spider, but you can also push the output to dCache or another external storage system. dCache also supports username/password authentication and certificate based proxy authentication.   
