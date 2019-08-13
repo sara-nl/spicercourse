@@ -15,7 +15,7 @@ wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/run-v
 Let us inspect the script that submits the job
 
 ```sh
-cat job-submit-variant-calling-tmpdir.sh
+cat job-submit-variant-calling-dcache.sh
 
 #!/bin/bash
 #SBATCH -c 1
