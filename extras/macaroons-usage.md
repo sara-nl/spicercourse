@@ -101,4 +101,11 @@ but research data in most domains. So how was the authnetication performed for y
 
 The data was shared with you with Macaroons - these are bearer tokens that you can use to authorize someone to dwonload/upload/delete data stored on dCache. These macaroons can be used with clients that can support bearer tokens (e.g., curl, Rclone). For this exercise a macaroon was created with certain restrictions (called as caveats) on the lifetime of the macaroon, the IP address you can use the macaroon from, the file that you can access, etc. Depending on who you want to share the data with, for how long and from which systems, these caveats can be adjusted. 
 
-You can download data on the fly (if you have good netowrk connectivity to the storage system from Spider) within each job without the hassle of downloading all the data to Spider. This is particularly handy if you want to automate large scale data analysis. In this example we saved the results locally on Spider, but you can also push the output to dCache or another external storage system. dCache also supports username/password authentication and certificate based proxy authentication.   
+You can check the status of the job and inspect the output log file (even if the job is not completed).
+
+```sh
+squeue -u $USER
+cat var-call-dcache-jobid.out #replace the jobid with your jobid 
+```
+
+You downloaded the input data on the fly (if you have good netowrk connectivity to the storage system from Spider) within each job without the hassle of downloading all the data to Spider. This is particularly handy if you want to automate large scale data analysis. In this example we saved the results locally on Spider, but you can also push the output to dCache or another external storage system. dCache also supports username/password authentication and certificate based proxy authentication.   
