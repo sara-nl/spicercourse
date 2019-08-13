@@ -1,6 +1,6 @@
 # Spider project spaces and roles
 
-1. [Project environment](#spider-spaces)
+1. [Spider project environment](#spider-spaces)
 2. [Data management](#spider-dm)
 3. [Software management](#spider-sm)
 4. [Data inspection and cleanup](#data-cleanup)
