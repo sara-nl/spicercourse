@@ -29,7 +29,7 @@ Each project on Spider gets its own project space. Let us get familiar with this
 
 > **_Food for brain:_**
 >
-> * Are you a data manager? If not, do you know who is the data manager?
+> * What is the role of a data manager? Do you have that role? If not, do you know who the data manager is?
 
 Let us use come handy commands that can tell you which 'groups' different users belong to.
 
@@ -43,7 +43,7 @@ Let us use come handy commands that can tell you which 'groups' different users 
  mkdir /project/spidercourse/Data/mydata
  ```
  
-What happened? As you are not a data manager (so not a part of spider_data group) but a user (part of spider_user group), you do not have write permissions in the project's Data directory. However, all users have read permissions. This means data is managed by a manager and can be shared within the project without worrying about regular users accidentally deleting/overwriting the data for the project.
+What happened? As you are not a data manager (so not a part of spider_data group) but a user (part of spider_user group), you do not have write permissions in the project's Data directory. However, all users have read permissions. This means data is managed by a 'data manager' and can be shared within the project without worrying about regular users accidentally deleting/overwriting the data for the project.
 
 #### 2.2 Data download
 
