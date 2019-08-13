@@ -149,11 +149,14 @@ It will ask you
 
 It will ask you for an installation path. 
 
+:woman: As Software manager
+ 
  ```sh
- #As Software manager
- /project/spidercourse/Software/ecoli-analysis-software/miniconda2 
-
- #As regular user
+  /project/spidercourse/Software/ecoli-analysis-software/miniconda2 
+ ```
+ 
+ :construction_worker: As regular user
+ ```sh
  $HOME/ecoli-analysis-software/miniconda2 
  ```
  
@@ -166,7 +169,7 @@ It will ask you for an installation path.
  exit 
  ```
 
-We will see later how Software installed in the Software project space can be used by all users. If you installed it in your $HOME directory, other users in the project cannot access it (unless you open up permissions which is NOT recommended). 
+We will see later how Software installed in the Software project space can be used by all users. If you installed it in your $HOME directory, other users in the project cannot access it. 
 
 Login again to Spider and inspect what environment variables have been set up
 
@@ -178,13 +181,19 @@ Login again to Spider and inspect what environment variables have been set up
 
 Follow the further instructions for the installation of individual tools
 
+:woman: As Software manager
+
  ```sh
- #As Software manager
  cd /project/spidercourse/Software/ecoli-analysis-software 
+ ```
  
- #As regular user
+:construction_worker: As regular user
+
+ ```sh
  cd $HOME
+ ```
  
+ ```sh
  conda install -c bioconda fastqc=0.11.7=5
 
  conda install -c bioconda trimmomatic=0.38=0
