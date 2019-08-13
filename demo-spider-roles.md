@@ -118,19 +118,24 @@ Let us also download the reference genome for E. coli REL606.
  mkdir /project/spidercourse/Software/mysoftware
  ```
  
-What happened? As you are not a Software manager :construction_worker: (so not a part of the spider_sw group), you do not have write permissions in the project's Software directory. However, all users still have read permissions. This means that you or one of your colleagues in this role can install complicated software and the dependencies, maintain it, and all project users can use that uniformly. This makes life easier and is crucial for reproducability of your results. Also, apart from project wide software, individual users can install their own software (or different versions) as you shall see below. 
+What happened? As you are not a Software manager :woman: (so not a part of the spider_sw group), you do not have write permissions in the project's Software directory. However, all users still have read permissions. This means that you or one of your colleagues in this role can install complicated software and the dependencies, maintain it, and all project users can use that uniformly. This makes life easier and is crucial for reproducability of your results. Also, apart from project wide software, individual users can install their own software (or different versions) as you shall see below. 
 
 #### 3.2 Miniconda installation
 
 We will use Miniconda; it is a package manager. We shall first install miniconda2 and then proceed to the installation of individual tools. Below are two set of instructions - one for Sotfware manager and one for regular user. 
 
+:woman: As Software manager
+ 
  ```sh
- #As Software manager
  cd /project/spidercourse/Software/ 
+ ```
  
- #As regular user
+ :construction_worker: As regular user
+ ```sh
  cd $HOME
+ ```
  
+ ```sh
  wget https://repo.continuum.io/miniconda/Miniconda2-4.6.14-Linux-x86_64.sh
  bash Miniconda2-4.6.14-Linux-x86_64.sh
  ```
