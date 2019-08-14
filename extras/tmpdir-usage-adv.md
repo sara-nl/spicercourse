@@ -9,14 +9,14 @@ you can copy input/output to/from this local scratch.
 cd $HOME
 mkdir ecoli-analysis-tmpdir
 cd ecoli-analysis-tmpdir
-wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/job-submit-variant-calling-tmpdir.sh
+wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/job-submit-variant-calling-tmpdir-adv.sh
 
-wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/run-variant-calling-tmpdir.sh
+wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/run-variant-calling-tmpdir-adv.sh
 ```
 We copy the files and scripts to the local scratch space on the worker node where your job lands. Let us inspect these scripts.
 
 ```sh
-cat job-submit-variant-calling-tmpdir.sh
+cat job-submit-variant-calling-tmpdir-adv.sh
 
 #!/bin/bash
 #SBATCH -c 1
@@ -25,11 +25,12 @@ cat job-submit-variant-calling-tmpdir.sh
 mkdir "$TMPDIR"/var-calling
 cd "$TMPDIR"/var-calling
 
-cp $HOME/ecoli-analysis-tmpdir/run-variant-calling-tmpdir.sh .
+cp $HOME/ecoli-analysis-tmpdir/run-variant-calling-tmpdir-adv.sh .
 
-export PATH="/project/spidercourse/Software/ecoli-analysis-software/miniconda2/bin:$PATH"
+export PATH="/project/surfadvisors/Software/ecoli-analysis-software/miniconda2/bin:$PATH"
 
-time bash run-variant-calling-tmpdir.sh 
+time bash run-variant-calling-tmpdir-adv.sh 
+
 ```
 Here we first created a directory with the help of a globally defined variable $TMPDIR. This directory will be created at the start of the job on the local scratch space and removed when the job is done. We copy the variant calling script to this directory and run it. To compare the performance with jobs that ran with data located on the project spaces, we will 'time' the job - this will tell us how long it took for the full job to finish.
 
