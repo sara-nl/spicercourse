@@ -28,6 +28,8 @@ cd "$TMPDIR"/var-calling
 
 cp $HOME/ecoli-analysis-dcache/run-variant-calling-dcache.sh .
 
+export PATH="/project/spidercourse/Software/ecoli-analysis-software/miniconda2/bin:$PATH"
+
 bash run-variant-calling-dcache.sh 
 ```
 
@@ -36,16 +38,6 @@ the start of the job on the local scratch space and removed when the job is done
 directory and run it. Let us first run the job and while it runs we can inspect how the data transfer happens within the job.
 
 ```sh
-#Set up the Software environment by adding the following line to your $HOME/.bashrc file
-
-nano $HOME/.bashrc
-export PATH="/project/spidercourse/Software/ecoli-analysis-software/miniconda2/bin:$PATH"
-exit
-
-#Login again
-
-cd $HOME/ecoli-analysis-dcache
-
 sbatch --job-name=var-call-dcache -J 'var-call-dcache' --output=%x-%j.out job-submit-variant-calling-dcache.sh
 ```
 
