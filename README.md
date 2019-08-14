@@ -34,6 +34,6 @@ Anyone who wants to start processing large data volumes (tens to hundreds of ter
 
 14:45 - 15:00 - Coffee
 
-15:00 - 16:15 - [Running data analysis and using collaboration features](https://github.com/sara-nl/spidercourse/blob/master/run-spider-jobs.md)
+15:00 - 16:15 - [Running data analysis and using collaboration features](https://github.com/sara-nl/spidercourse/blob/master/extras/README.md)
 
 16:15 - 17:00 - [Additional features on the platform and conclusion](https://github.com/sara-nl/spidercourse/blob/master/additional-features.md)
