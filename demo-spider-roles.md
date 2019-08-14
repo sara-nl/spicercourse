@@ -165,7 +165,15 @@ It will ask you for an installation path.
  ```sh
  Do you wish the installer to initialize Miniconda2 by running conda init? [yes|no]
  yes # please answer yes
-
+ ...
+ ...
+ ...
+ If you'd prefer that conda's base environment not be activated on startup, set the auto_activate_base parameter to false: 
+ conda config --set auto_activate_base false 
+ 
+ Thank you for installing Miniconda2!
+ 
+ #This shows that you successfully installed miniconda2. For these changes to take effect, please logout and login again.
  exit 
  ```
 
