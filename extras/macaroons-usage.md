@@ -6,7 +6,9 @@ storage system (hard disk storage with tape backend) that provides excellent net
 Here we will run a job where you will download the data directly on the worker node within the job, run the analysis and push the output to your home directory.
 
 ```sh
-cd $HOME/ecoli-analysis
+cd $HOME
+mkdir ecoli-analysis-dcache
+cd ecoli-analysis-dcache
 wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/job-submit-variant-calling-dcache.sh
 
 wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/run-variant-calling-dcache.sh
@@ -24,7 +26,7 @@ cat job-submit-variant-calling-dcache.sh
 mkdir "$TMPDIR"/var-calling
 cd "$TMPDIR"/var-calling
 
-cp $HOME/ecoli-analysis/run-variant-calling-dcache.sh .
+cp $HOME/ecoli-analysis-dcache/run-variant-calling-dcache.sh .
 
 bash run-variant-calling-dcache.sh 
 ```
@@ -39,21 +41,21 @@ sbatch --job-name=var-call-dcache -J 'var-call-dcache' --output=%x-%j.out job-su
 
 Now lets inspect the variant calling script
 ```sh
-cat run-variant-calling-tmpdir.sh
+cat run-variant-calling-dcache.sh
 
 #!/bin/bash
 set -e
 ecolipath=$PWD
 
 mkdir -p data/ref_genome
-cp $HOME/ecoli-analysis/data/ref_genome/ecoli_rel606.fasta data/ref_genome/
+cp /project/spidercourse/Data/ecoli-analysis/data/ref_genome/ecoli_rel606.fasta data/ref_genome/
 
 cd data/
 curl https://webdav.grid.surfsara.nl:2880/?authz=MDAxY2xvY2F0aW9uIE9wdGlvbmFsLmVtcHR5CjAwMThpZGVudGlmaWVyIDVMdFI5S29QCjAwMzJjaWQgaWQ6NDM2MzI7NDEzODUsNDQ0MzYsNDI1MjksMzAwMTM7bWFpdGhpbGsKMDAyOGNpZCBiZWZvcmU6MjAxOS0wOS0xMlQxMDoxMzoyNy42NzVaCjAwNWFjaWQgcm9vdDovcG5mcy9ncmlkLnNhcmEubmwvZGF0YS9sc2dyaWQvU1VSRnNhcmEvc3BpZGVyY291cnNlL3RyaW1tZWRfZmFzdHFfc21hbGwudGFyCjAwMWZjaWQgYWN0aXZpdHk6RE9XTkxPQUQsTElTVAowMDJmc2lnbmF0dXJlIGL5MfchTf7sH1Ela025OBtIiYmsB3LAbutPyTbgW73yCg --output trimmed_fastq_small.tar
 tar xvf trimmed_fastq_small.tar
 
-mkdir $ecolipath/results-dcache
-cd $ecolipath/results-dcache
+mkdir $ecolipath/results
+cd $ecolipath/results
 
 genome=$ecolipath/data/ref_genome/ecoli_rel606.fasta
 
@@ -87,7 +89,7 @@ for fq1 in $ecolipath/data/trimmed_fastq_small/*_1.trim.sub.fastq
    
     done
 
-cp -r $TMPDIR/var-calling/results-dcache $HOME/ecoli-analysis/
+cp -r $TMPDIR/var-calling/results $HOME/ecoli-analysis-dcache/
 ```
 
 > **_Food for brain:_**
