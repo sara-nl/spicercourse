@@ -122,5 +122,6 @@ cat var-call-tmpdir-jobID.out #replace the jobID
 grep -v "#" $HOME/ecoli-analysis-tmpdir/results/vcf/SRR2589044_final_variants.vcf | wc -l
 
 #The answer should be 10 (the number if expected variants detected in this population)
+```
 
 In this example you used the SSD available locally on the worker nodes instead of having your data on the shared project spaces. For large datasets and heavy processing (particularly heavy I/O), the overall gain in using the scratch space can be higher.
