@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+set -x
 ecolipath=$PWD
 
 mkdir -p data/ref_genome
