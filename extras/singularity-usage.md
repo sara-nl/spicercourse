@@ -124,6 +124,23 @@ cp /project/spidercourse/Software/elixir-singularity.sif  $HOME/ecoli-analysis-c
 sbatch --job-name=var-call-singularity -J 'var-call-singularity' --output=%x-%j.out job-submit-variant-calling-singularity.sh
 ```
 
-Did the analysis run successfully? You got the same results with the container without setting a single path for your software! 
+Did the analysis run successfully? To test the status of your job you can run the command
+
+```sh
+squeue -u $USER
+```
+
+If your job has finished you can check the output log for errors
+
+```sh
+cat var-call-tmpdir-jobID.out #replace the jobID
+
+#Another check would be the output of the following command
+grep -v "#" $HOME/ecoli-analysis-tmpdir/results/vcf/SRR2589044_final_variants.vcf | wc -l
+
+#The answer should be 10 (the number if expected variants detected in this population)
+```
+
+You got the same results as earlier examples with the container without setting a single path for your software! 
 
 Wondering how the container was built? You can find the recipe [here](https://raw.githubusercontent.com/sara-nl/spidercourse/master/extras/singularity-recipe). This container was built on Singularity version 3.2.1-1 (on macOS Mojave running Vagrant). Using containers is simple but you should bear in mind that it should be properly built with all the required dependencies, and should be updated regularly and tested in the runtime environment. 
