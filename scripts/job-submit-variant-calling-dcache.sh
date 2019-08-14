@@ -5,6 +5,6 @@
 mkdir "$TMPDIR"/var-calling
 cd "$TMPDIR"/var-calling
 
-cp $HOME/ecoli-analysis/run-variant-calling-dcache.sh .
+cp $HOME/ecoli-analysis-dcache/run-variant-calling-dcache.sh .
 
 bash run-variant-calling-dcache.sh 
