@@ -2,4 +2,4 @@
 #SBATCH -c 1
 #SBATCH --constraint=skylake
 
-bash $HOME/ecoli-analysis/run-variant-calling-singularity.sh 
+bash $HOME/ecoli-analysis-container/run-variant-calling-singularity.sh 
