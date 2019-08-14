@@ -3,14 +3,14 @@ set -e
 ecolipath=$PWD
 
 mkdir -p data/ref_genome
-cp $HOME/ecoli-analysis/data/ref_genome/ecoli_rel606.fasta data/ref_genome/
+cp /project/spidercourse/Data/ecoli-analysis/data/ref_genome/ecoli_rel606.fasta data/ref_genome/
 
 cd data/
 curl https://webdav.grid.surfsara.nl:2880/?authz=MDAxY2xvY2F0aW9uIE9wdGlvbmFsLmVtcHR5CjAwMThpZGVudGlmaWVyIDVMdFI5S29QCjAwMzJjaWQgaWQ6NDM2MzI7NDEzODUsNDQ0MzYsNDI1MjksMzAwMTM7bWFpdGhpbGsKMDAyOGNpZCBiZWZvcmU6MjAxOS0wOS0xMlQxMDoxMzoyNy42NzVaCjAwNWFjaWQgcm9vdDovcG5mcy9ncmlkLnNhcmEubmwvZGF0YS9sc2dyaWQvU1VSRnNhcmEvc3BpZGVyY291cnNlL3RyaW1tZWRfZmFzdHFfc21hbGwudGFyCjAwMWZjaWQgYWN0aXZpdHk6RE9XTkxPQUQsTElTVAowMDJmc2lnbmF0dXJlIGL5MfchTf7sH1Ela025OBtIiYmsB3LAbutPyTbgW73yCg --output trimmed_fastq_small.tar
 tar xvf trimmed_fastq_small.tar
 
-mkdir $ecolipath/results-dcache
-cd $ecolipath/results-dcache
+mkdir $ecolipath/results
+cd $ecolipath/results
 
 genome=$ecolipath/data/ref_genome/ecoli_rel606.fasta
 
@@ -27,12 +27,12 @@ for fq1 in $ecolipath/data/trimmed_fastq_small/*_1.trim.sub.fastq
 
     fq1=$ecolipath/data/trimmed_fastq_small/${base}_1.trim.sub.fastq
     fq2=$ecolipath/data/trimmed_fastq_small/${base}_2.trim.sub.fastq
-    sam=$ecolipath/results-dcache/sam/${base}.aligned.sam
-    bam=$ecolipath/results-dcache/bam/${base}.aligned.bam
-    sorted_bam=$ecolipath/results-dcache/bam/${base}.aligned.sorted.bam
-    raw_bcf=$ecolipath/results-dcache/bcf/${base}_raw.bcf
-    variants=$ecolipath/results-dcache/bcf/${base}_variants.vcf
-    final_variants=$ecolipath/results-dcache/vcf/${base}_final_variants.vcf 
+    sam=$ecolipath/results/sam/${base}.aligned.sam
+    bam=$ecolipath/results/bam/${base}.aligned.bam
+    sorted_bam=$ecolipath/results/bam/${base}.aligned.sorted.bam
+    raw_bcf=$ecolipath/results/bcf/${base}_raw.bcf
+    variants=$ecolipath/results/bcf/${base}_variants.vcf
+    final_variants=$ecolipath/results/vcf/${base}_final_variants.vcf 
 
     bwa mem $genome $fq1 $fq2 > $sam
     samtools view -S -b $sam > $bam
@@ -44,4 +44,4 @@ for fq1 in $ecolipath/data/trimmed_fastq_small/*_1.trim.sub.fastq
    
     done
 
-cp -r $TMPDIR/var-calling/results-dcache $HOME/ecoli-analysis/
+cp -r $TMPDIR/var-calling/results $HOME/ecoli-analysis-dcache/
