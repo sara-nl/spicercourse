@@ -6,6 +6,6 @@
 mkdir "$TMPDIR"/var-calling
 cd "$TMPDIR"/var-calling
 
-cp $HOME/ecoli-analysis/run-variant-calling-tmpdir.sh .
+cp $HOME/ecoli-analysis-tmpdir/run-variant-calling-tmpdir.sh .
 
 time bash run-variant-calling-tmpdir.sh 
