@@ -8,15 +8,21 @@
 
 ### <a name="job-setup"></a> 1. Set up job environment
 
-We will download a set of trimmed FASTQ files to work with. These are small subsets of our real trimmed data we prepared earlier, and will enable us to run our variant calling workflow quite quickly. Later on if you have more time, you can try using the full data.
+We will download a set of trimmed fastq files to work with. These are small subsets of our real trimmed data we prepared earlier, and will enable us to run our variant calling workflow quite quickly. Later on if you have more time, you can try using the full data.
+
+:information_desk_person: As data manager
 
 ```sh
-#As data manager
 cd /project/spidercourse/Data/ecoli-analysis/data
+```
 
-# As a regular user
+:construction_worker: As a regular user
+
+```sh
 cd $HOME/ecoli-analysis/data
+```
 
+```
 mkdir trimmed_fastq_small
 cd trimmed_fastq_small
 curl -L -o sub.tar.gz https://ndownloader.figshare.com/files/14418248
@@ -33,13 +39,19 @@ Our variant calling workflow has the following steps:
 5. Detect the single nucleotide polymorphisms (SNPs)  
 6. Filter and report the SNP variants in VCF (variant calling format) 
 
+:information_desk_person: As data manager
+
 ```sh
-#As data manager
 cd /project/spidercourse/Data/ecoli-analysis/
+```
 
-# As a regular user
+:construction_worker: As a regular user
+
+```
 cd $HOME/ecoli-analysis/
+```
 
+```sh
 mkdir results
 wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/job-submit-variant-calling.sh
 ```
@@ -55,11 +67,12 @@ cat job-submit-variant-calling.sh
 bash /project/spidercourse/Data/ecoli-analysis/run-variant-calling.sh 
 ```
 
-The job script in turn calls another script that will run the variant calling. Let us dwonload that script first
+The job script in turn calls another script that will run the variant calling. Let us download that script first
 
 ```sh
 wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/run-variant-calling.sh
 ```
+
 ### <a name="run-var-call"></a> 2. Run variant calling jobs
 
 Let us submit the job first and then inspect the steps while the job runs
@@ -175,10 +188,9 @@ squeue -u $USER
 So did the job run properly this time? Check the log file
 
 ```sh
-squeue -u $USER
-cat var-call-jobid.out #replace the jobid with your jobid 
+cat var-call-jobid.out #replace the jobid with your new jobid 
 ```
-You can see that now the job runs properly which is great.
+You can see that now the job runs properly!
 
 > **_Food for brain:_**
 >
@@ -187,7 +199,7 @@ You can see that now the job runs properly which is great.
 
 ### <a name="share-data"></a> 4. Sharing results in a project
 
-You have already been introduced to the Data and Software project spaces and the associated roles. A shared Data folder reduces unnecessary replicas of the same data, and having a manager to handle the data reduces the risk of accidental removal. However, you also need a space where the results can be shared and the benefits are twofold - not everyone needs to run the same analysis (and co-ordinate on how this can be done uniformly) and the results can be used for post processing without the hassle of transfering the data to each other. This functionality is provided by the Shared project space.
+You have already been introduced to the Data and Software project spaces and the associated roles. A shared Data folder reduces unnecessary replicas of the same data, and having a dats manager to handle the data reduces the risk of accidental removal. However, you also need a space where the results can be shared and the benefits are twofold - not everyone needs to run the same analysis (and co-ordinate on how this can be done uniformly) and the results can be used for a variety of post processing without the hassle of transfering the data to each other. This functionality is provided by the Shared project space.
 
 ```sh
 cd /project/spidercourse/Share
@@ -197,21 +209,22 @@ ls -l
 
 > **_Food for brain:_**
 >
-> * So you created this folder but looks like someone else became the owner. Any idea why? Hint: This is a "Shared" directory.
-> * Can you delete the directories/files not owned by you?
+> * So you created this folder but possibly someone else became the owner. Any idea why? Hint: This is a "Shared" directory.
+> * Can you delete the directories/files not owned by you? Hint: Be careful and be nice!
 
 So the etiquette to keep in mind when using the Share folder is that you can acidentally delete/overwrite someone else's
 results and vice versa, or the entire results of your project. So be careful!
  
 ```sh
 cd /project/spidercourse/Share
-mkdir $USER-results
+mkdir $USER-results #Adding your name to the folder will keep it unique and identifiable
 ls -l
 ```
 
 You may copy your results to the folder you created above to share the results with your colleagues. Please check first if your job is finished, else you will copy partial results only.
 
 ```sh
+squeue -u $USER
 cd /project/spidercourse/Share/$USER-results
 cp -r $HOME/ecoli-analysis/results .
 ```
@@ -238,7 +251,7 @@ grep -v "#" results/vcf/SRR2589044_final_variants.vcf | wc -l
 Now that you finished your analysis for a small dataset, shall we see how much resources did you use on the cluster? You can use the following command to find this information:
 
 ```sh
-sacct --format=JobID,JobName,AveCPU,Elapsed  # sacc displays accounting data for all jobs
+sacct --format=JobID,JobName,AveCPU,Elapsed -S '2019-08-28' # sacct displays accounting data for all jobs
 ```
 
 > **_Food for brain:_**
@@ -246,6 +259,6 @@ sacct --format=JobID,JobName,AveCPU,Elapsed  # sacc displays accounting data for
 > * What do these numbers indicate?
 > * How can you find more information about your jobs e.g., the maximum memory? Hint: add the flag "MaxRSS" in your query
 > * How much time do you estimate your typical workflow will take to run on Spider - at the moment it has 240 cores?
-> * How can your work benefit from running on Spider e.g., with project spaces, public views? In the enxt session we will demonstrate yet more features on Spider
+> * How can your work benefit from running on Spider e.g., with project spaces, public views? 
 
-There are some extra examples [here](https://github.com/sara-nl/spidercourse/tree/master/extras) if you have already finished the previous examples and would like to explore more.
+In this example you downloaded the raw data, installed the software, ran the analysis and shared your results while using learned some of the nice features of the system such as project spaces and different roles within a project. Spider has many more features to offer. [Here](https://github.com/sara-nl/spidercourse/tree/master/extras) you can the same example with the additional advanced functionalities of the system, and also explore more features.
