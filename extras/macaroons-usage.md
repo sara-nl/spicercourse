@@ -36,6 +36,16 @@ the start of the job on the local scratch space and removed when the job is done
 directory and run it. Let us first run the job and while it runs we can inspect how the data transfer happens within the job.
 
 ```sh
+#Set up the Software environment by adding the following line to your $HOME/.bashrc file
+
+nano $HOME/.bashrc
+export PATH="/project/spidercourse/Software/ecoli-analysis-software/miniconda2/bin:$PATH"
+exit
+
+#Login again
+
+cd $HOME/ecoli-analysis-dcache
+
 sbatch --job-name=var-call-dcache -J 'var-call-dcache' --output=%x-%j.out job-submit-variant-calling-dcache.sh
 ```
 
@@ -108,6 +118,11 @@ You can check the status of the job and inspect the output log file (even if the
 ```sh
 squeue -u $USER
 cat var-call-dcache-jobid.out #replace the jobid with your jobid 
+
+#Another check would be the output of the following command
+grep -v "#" $HOME/ecoli-analysis-dcache/results/vcf/SRR2589044_final_variants.vcf | wc -l
+
+#The answer should be 10 (the number if expected variants detected in this population)
 ```
 
-You downloaded the input data on the fly (if you have good netowrk connectivity to the storage system from Spider) within each job without the hassle of downloading all the data to Spider. This is particularly handy if you want to automate large scale data analysis. In this example we saved the results locally on Spider, but you can also push the output to dCache or another external storage system. dCache also supports username/password authentication and certificate based proxy authentication.   
+You downloaded the input data on the fly (if you have good network connectivity to the storage system from Spider) within each job without the hassle of downloading all the data to Spider. This is particularly handy if you want to automate large scale data analysis. In this example we saved the results locally on Spider, but you can also push the output to dCache or another external storage system. dCache also supports username/password authentication and certificate based proxy authentication.   
