@@ -1,6 +1,6 @@
 ## Testing advanced features of Spider
 
-### Running E-coli analkysis with advanced features
+### 1. Running E-coli analkysis with advanced features
 
 If you already ran the earlier example with [data and software management](https://github.com/sara-nl/spidercourse/blob/master/demo-spider-roles.md) and [data analysis](https://github.com/sara-nl/spidercourse/blob/master/run-spider-jobs.md), you are familiar with project spaces and 
 various roles in a project and may start running the following examples directly. 
@@ -11,8 +11,8 @@ led by Richard Lenski to assess adaptation in E. coli. A population was propagat
 glucose-limited minimal medium. 
 - We will be working with three sample events from the Ara-3 strain of this experiment, 
 one from 5,000 generations, one from 15,000 generations, and one from 50,000 generations to study how the population changed.
-- The instructions data and software management for the examples below are included in each example and the examples run independently.
-- You will download a small set of data that has already been trimmed and will run the variant calling workflow using these additional features
+- You will download a small set of data that has already been trimmed and will run the variant calling workflow.
+- The instructions for data and software management for the examples below are included in each example and the examples can be run independently.
 
 1. [Analysis on local scratch space on worker nodes](https://github.com/sara-nl/spidercourse/blob/master/extras/tmpdir-usage.md)
 
@@ -20,7 +20,7 @@ one from 5,000 generations, one from 15,000 generations, and one from 50,000 gen
 
 3. [Accessing data from external storage systems](https://github.com/sara-nl/spidercourse/blob/master/extras/macaroons-usage.md)
 
-### Testing advanced features with additional examples
+### 2. Testing advanced features with additional examples
 
 1. Using Scientific catalogues (ND)
 
