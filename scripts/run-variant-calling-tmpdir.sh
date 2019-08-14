@@ -3,11 +3,11 @@ set -e
 ecolipath=$PWD
 
 mkdir -p data/ref_genome
-cp $HOME/ecoli-analysis/data/ref_genome/ecoli_rel606.fasta data/ref_genome/
+cp /project/spidercourse/Data/ecoli-analysis/data/ref_genome/ecoli_rel606.fasta data/ref_genome/
 ls data/ref_genome
 
 mkdir data/trimmed_fastq_small
-cp $HOME/ecoli-analysis/data/trimmed_fastq_small/*fastq data/trimmed_fastq_small/
+cp /project/spidercourse/Data/ecoli-analysis/data/trimmed_fastq_small/*fastq data/trimmed_fastq_small/
 ls data/trimmed_fastq_small
 
 mkdir results
@@ -44,5 +44,5 @@ for fq1 in $ecolipath/data/trimmed_fastq_small/*_1.trim.sub.fastq
     vcfutils.pl varFilter $variants > $final_variants
    
     done
-    
-cp -r $TMPDIR/var-calling/results $HOME/ecoli-analysis/
+
+cp -r $TMPDIR/var-calling/results $HOME/ecoli-analysis-tmpdir/
