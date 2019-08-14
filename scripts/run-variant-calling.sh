@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+set -x
 ecolipath=/project/spidercourse/Data/ecoli-analysis
 
 cd $ecolipath/results
