@@ -1,3 +1,5 @@
+#!/bin/bash
+set -x
 set -e
 ecolipath=$HOME/ecoli-analysis-container
 
