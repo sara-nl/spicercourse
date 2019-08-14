@@ -19,4 +19,12 @@ features:
 
 ## Testing advanced features with additional examples
 
+1. Scientific catalogues (ND)
 
+2. Jupyter notebooks (ND)
+
+3. Infinite partition (ND)
+
+4. Softdrive (ND - if possible)
+
+5. fio example tmpdir cephfs (RO - for advisors pilot) also add massive scaling - pretty graphs
