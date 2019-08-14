@@ -11,20 +11,20 @@ one from 5,000 generations, one from 15,000 generations, and one from 50,000 gen
 You will download a small set of data that has already been trimmed and will run the variant calling workflow using these additional 
 features:
 
-1. [Running analysis on local scratch space on worker nodes](https://github.com/sara-nl/spidercourse/blob/master/extras/tmpdir-usage.md)
+1. [Analysis on local scratch space on worker nodes](https://github.com/sara-nl/spidercourse/blob/master/extras/tmpdir-usage.md)
 
-2. [Running analysis with containers](https://github.com/sara-nl/spidercourse/blob/master/extras/singularity-usage.md)
+2. [Analysis with containers](https://github.com/sara-nl/spidercourse/blob/master/extras/singularity-usage.md)
 
 3. [Accessing data from external storage systems](https://github.com/sara-nl/spidercourse/blob/master/extras/macaroons-usage.md)
 
 ### Testing advanced features with additional examples
 
-1. Scientific catalogues (ND)
+1. Using Scientific catalogues (ND)
 
-2. Jupyter notebooks (ND)
+2. Using Jupyter notebooks (ND)
 
-3. Infinite partition (ND)
+3. Infinite partition for long running jobs (ND)
 
-4. Softdrive (ND - if possible)
+4. Softdrive for software distribution (ND - if possible)
 
-5. fio example tmpdir cephfs (RO - for advisors pilot) also add massive scaling - pretty graphs
+5. System performance - Pretty graphs fio example tmpdir cephfs (RO - for advisors pilot) also add massive scaling 
