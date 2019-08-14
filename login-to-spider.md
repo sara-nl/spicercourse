@@ -54,7 +54,7 @@ Now that you have inspected the script that will submit your job, let's submit i
  sbatch my-first-job.sh  #This command will submit a job and give you a unique jobID in return
  squeue -u $USER  #Check the status of your job
  ls  #Check if the output, slurm-jobID.out, is present
- cat slurm-yourjobID.out #Replace jobID with the ID of your job
+ cat slurm-jobID.out #Replace jobID with the ID of your job
  
  #If you wish to cancel a running job you can do so with the following command
  scancel 12345 #Replace 12345 with your corresponding jobID
