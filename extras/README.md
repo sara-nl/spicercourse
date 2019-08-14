@@ -17,7 +17,7 @@ features:
 
 3. [Accessing data from external storage systems](https://github.com/sara-nl/spidercourse/blob/master/extras/macaroons-usage.md)
 
-## Testing advanced features with additional examples
+### Testing advanced features with additional examples
 
 1. Scientific catalogues (ND)
 
