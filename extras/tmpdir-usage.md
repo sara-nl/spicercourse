@@ -106,3 +106,5 @@ sbatch --job-name=var-call-tmpdir -J 'var-call-tmpdir' --output=%x-%j.out job-su
 > * What does the time command do? How do you interpret the output?
 > * You need to rerun the previous example with data in the project space by adding the 'time' command.
 > * Does the $TMPDIR example have better performance? When is it advantageous to use it?
+
+In this example you used the SSD available locally on the worker nodes instead of having your data on the shared project spaces. For large datasets and heavy processing (particularly heavy I/O), the overall gain in using the scratch space can be higher.
