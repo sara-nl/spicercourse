@@ -1,6 +1,6 @@
 ## Testing advanced features of Spider
 
-### 1. Running E-coli analkysis with advanced features
+### 1. Running E-coli analysis with advanced features
 
 If you already ran the earlier example with [data and software management](https://github.com/sara-nl/spidercourse/blob/master/demo-spider-roles.md) and [data analysis](https://github.com/sara-nl/spidercourse/blob/master/run-spider-jobs.md), you are familiar with project spaces and 
 various roles in a project and may start running the following examples directly. 
