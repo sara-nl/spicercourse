@@ -92,7 +92,7 @@ Here we copy the input data to the $TMPDIR. The parent paths are redefined and h
 ```sh
 #Make sure the path to store the results in the variant calling script does not already have the results
 
-sbatch --job-name=var-call-tmpdir -J 'var-call-tmpdir' --output=%x-%j.out job-submit-variant-calling-tmpdir.sh
+sbatch --job-name=var-call-tmpdir -J 'var-call-tmpdir' --output=%x-%j.out job-submit-variant-calling-tmpdir-adv.sh
 ```
 
 > **_Food for brain:_**
