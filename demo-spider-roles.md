@@ -307,6 +307,7 @@ cat data_qc.sh
 
 #!/bin/bash
 set -e
+set -x
 
 #if you are a data manager, uncomment the following line (remove the #)
 #ecolipath=/project/spidercourse/Data/ecoli-analysis
