@@ -28,7 +28,7 @@ The instructions for data and software management for the examples below are inc
 
 2. Using Jupyter notebooks (ND)
 
-3. Infinite partition for long running jobs (ND)
+3. Infinite partition for long running jobs (RO)
 
 4. Softdrive for software distribution (ND - if possible)
 
