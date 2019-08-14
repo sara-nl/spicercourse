@@ -354,7 +354,7 @@ In this job, we have combined the creation of files to assess quality control as
 
 ```sh
 cd /project/spidercourse/Public/
-ls
+ls ecoli-analysis
 ```
 
 The Public directory is yet another project space that can be accessed by not only all Spider users but is open to anyone.  This public space is exposed to the web under the domain: https://public.spider.surfsara.nl/project/[PROJECTNAME]/. To view the files go to https://public.spider.surfsara.nl/project/spidercourse/ link from the browser on your laptop. You can view one of the files in the ecoli-analhysis folder and [study](https://datacarpentry.org/wrangling-genomics/02-quality-control/index.html) the quality of the data we have.
