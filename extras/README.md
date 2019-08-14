@@ -1,6 +1,6 @@
-### Testing advanced features of Spider
+## Testing advanced features of Spider
 
-#### Running E-coli analkysis with advanced features
+### Running E-coli analkysis with advanced features
 
 If you already ran the example with data and software management and data analysis, you are familiar with project spaces and 
 various roles in a project and may start running the following examples directly. If you skipped these, here is a quick 
@@ -17,6 +17,6 @@ features:
 
 3. [Accessing data from external storage systems](https://github.com/sara-nl/spidercourse/blob/master/extras/macaroons-usage.md)
 
-#### testing advanced features with additional examples
+## Testing advanced features with additional examples
 
 
