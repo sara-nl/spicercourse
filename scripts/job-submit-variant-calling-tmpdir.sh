@@ -5,7 +5,7 @@
 mkdir "$TMPDIR"/var-calling
 cd "$TMPDIR"/var-calling
 
-cp $HOME/ecoli-analysis-tmpdir/run-variant-calling-tmpdir-adv.sh .
+cp $HOME/ecoli-analysis-tmpdir/run-variant-calling-tmpdir.sh .
 
 export PATH="/project/spidercourse/Software/ecoli-analysis-software/miniconda2/bin:$PATH"
 
