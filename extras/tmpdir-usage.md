@@ -86,6 +86,16 @@ cp -r $TMPDIR/var-calling/results $HOME/ecoli-analysis-tmpdir/
 Here we copy the input data to the $TMPDIR. The parent paths are redefined and hence the rest of the workflow remains the same. In the end we copy the output to our $HOME directory as the $TMPDIR is removed after thew job finishes amd we will lose our results. You can run this example and compare if the performance was better/worse/equivalent to the performance with the jobs when the data is in project spaces.
 
 ```sh
+#Set up the Software environment by adding the following line to your $HOME.bashrc file
+
+nano $HOME/.bashrc
+export PATH="/project/spidercourse/Software/ecoli-analysis-software/miniconda2/bin:$PATH"
+exit
+
+#Login again
+
+cd $HOME/ecoli-analysis-tmpdir
+
 #Make sure the path to store the results in the variant calling script does not already have the results
 
 sbatch --job-name=var-call-tmpdir -J 'var-call-tmpdir' --output=%x-%j.out job-submit-variant-calling-tmpdir.sh
