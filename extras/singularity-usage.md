@@ -53,6 +53,7 @@ cat run-variant-calling-singularity.sh
 
 #!/bin/bash
 set -e
+set -x
 ecolipath=$HOME/ecoli-analysis-container
 
 mkdir -p data/ref_genome
