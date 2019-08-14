@@ -1,4 +1,4 @@
-### Using local scratch on worker nodes
+## Using local scratch on worker nodes
 
 
 The jobs that you can run on Spider may have input/output data located on your project space (on CephFS; Ceph File System). The 
