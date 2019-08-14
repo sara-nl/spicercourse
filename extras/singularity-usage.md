@@ -116,7 +116,7 @@ for fq1 in $ecolipath/data/trimmed_fastq_small/*_1.trim.sub.fastq
 > * Can you install some new software in this container? 
 
 ```
-#Copy the container in your $HOME
+#Copy the container to the location as expected in the script
 
 cp /project/spidercourse/Software/elixir-singularity.sif  $HOME/ecoli-analysis-container
 
