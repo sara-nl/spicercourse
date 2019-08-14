@@ -21,7 +21,7 @@ Each project on Spider gets its own project space. Let us get familiar with this
 
 ### <a name="spider-dm"></a> 2. Data management
 
-#### 2.1 Data manager Role
+#### 2.1 Data manager Role :information_desk_person:
 
  ```sh
  id $USER
@@ -31,7 +31,7 @@ Each project on Spider gets its own project space. Let us get familiar with this
 >
 > * What is the role of a data manager? Do you have that role? If not, do you know who the data manager is?
 
-Let us use come handy commands that can tell you which 'groups' different users belong to.
+Let us use some handy commands that can tell you which 'groups' different users belong to.
 
  ```sh
  getent group spidercourse-data
@@ -43,7 +43,7 @@ Let us use come handy commands that can tell you which 'groups' different users 
  mkdir /project/spidercourse/Data/mydata
  ```
  
-What happened? As you are not a data manager :information_desk_person: (so not a part of spider_data group) but a user (part of spider_user group), you do not have write permissions in the project's Data directory. However, all users have read permissions. This means data is managed by a 'data manager' and can be shared within the project without worrying about regular users accidentally deleting/overwriting the data for the project.
+What happened? As you are not a data manager :information_desk_person: (so not a part of spider_data group) but a user (part of spider_user group), you do not have write permissions in the project's Data directory. However, all users in this project have read permissions. This means data is managed by a 'data manager' and can be shared within the project without worrying about regular users accidentally deleting/overwriting the data for the project.
 
 #### 2.2 Data download
 
@@ -102,7 +102,7 @@ Let us also download the reference genome for E. coli REL606.
 
 ### <a name="spider-sm"></a> 3. Software management
 
-#### 3.1 Software manager Role
+#### 3.1 Software manager Role :woman:
 
  ```sh
  id $USER
@@ -221,7 +221,7 @@ samtools        (utility for manipulating data in the SAM format)
 bcftools        (variant calling tool)
 ```
 
-For the last two tools you can see that a library is missing! This will very often be the case that not every installation will be completely successful on every system. If the Software manager resolves these issues, users can freely use the software and avoid hassles of resolving software dependencies. The Softare manager has already resolved this for you and instead of troubleshooting you can already start using this installation by performing the following steps:
+For the last two tools you can see that a library is missing! This will very often be the case that not every default installation will run on every system - some dependencies might be missing and would require troubleshooting. If the Software manager resolves these issues, users can freely use the software and avoid hassles of resolving software dependencies. In this case, the Softare manager has already resolved this for you and instead of troubleshooting you can already start using this installation by performing the following steps:
 
 ```sh
 nano $HOME/.bashrc
@@ -252,19 +252,25 @@ echo $PATH
 samtools
 bcftools
 ```
-As you can see the error is resolved and you can proceed to running the analysis. Just so you know in this particular case it was a simple solution, the missing library was downloaded to Spider and copied as follows "cp /scratch/libcrypto.so.1.0.0 ecoli-analysis-software/miniconda2/lib/"
+As you can see the error is resolved and you can proceed to running the analysis. Just so you know in this particular case it was a simple solution, the missing library was downloaded to Spider and copied as follows "cp libcrypto.so.1.0.0 ecoli-analysis-software/miniconda2/lib/"
 
 ### <a name="data-cleanup"></a> 4. Data inspection and cleanup
 
-Now that you have the raw data and the software installed, we will assess the quality of the sequence reads contained in our fastq files and run filtering.
+Now that you have the raw data and the software installed, we will assess the quality of the sequence reads contained in our fastq files and run filtering. Pay attention to the changes you need to make to the scripts.
+
+:information_desk_person: As data manager
 
 ```sh
-#As data manager
 cd /project/spidercourse/Data/ecoli-analysis/
+```
 
-# As a regular user
+:construction_worker: As a regular user
+
+```sh 
 cd $HOME/ecoli-analysis
+```
 
+```
 wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/job-submit-datatrimming.sh
  
 cat job-submit-datatrimming.sh
