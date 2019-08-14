@@ -14,6 +14,7 @@ one from 5,000 generations, one from 15,000 generations, and one from 50,000 gen
 - You will download a small set of data that has already been trimmed and will run the variant calling workflow.
 - The instructions for data and software management for the examples below are included in each example and the examples can be run independently.
 
+
 1. [Analysis on local scratch space on worker nodes](https://github.com/sara-nl/spidercourse/blob/master/extras/tmpdir-usage.md)
 
 2. [Analysis with containers](https://github.com/sara-nl/spidercourse/blob/master/extras/singularity-usage.md)
