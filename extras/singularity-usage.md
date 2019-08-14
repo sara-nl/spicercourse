@@ -137,7 +137,7 @@ If your job has finished you can check the output log for errors
 cat var-call-tmpdir-jobID.out #replace the jobID
 
 #Another check would be the output of the following command
-grep -v "#" $HOME/ecoli-analysis-tmpdir/results/vcf/SRR2589044_final_variants.vcf | wc -l
+grep -v "#" $HOME/ecoli-analysis-container/results/vcf/SRR2589044_final_variants.vcf | wc -l
 
 #The answer should be 10 (the number if expected variants detected in this population)
 ```
