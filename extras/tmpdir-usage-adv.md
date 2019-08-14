@@ -35,18 +35,19 @@ time bash run-variant-calling-tmpdir-adv.sh
 Here we first created a directory with the help of a globally defined variable $TMPDIR. This directory will be created at the start of the job on the local scratch space and removed when the job is done. We copy the variant calling script to this directory and run it. To compare the performance with jobs that ran with data located on the project spaces, we will 'time' the job - this will tell us how long it took for the full job to finish.
 
 ```sh
-cat run-variant-calling-tmpdir.sh
+cat run-variant-calling-tmpdir-adv.sh
 
 #!/bin/bash
 set -e
+set -x
 ecolipath=$PWD
 
 mkdir -p data/ref_genome
-cp /project/spidercourse/Data/ecoli-analysis/data/ref_genome/ecoli_rel606.fasta data/ref_genome/
+cp /project/surfadvisors/Data/ecoli-analysis/data/ref_genome/ecoli_rel606.fasta data/ref_genome/
 ls data/ref_genome
 
 mkdir data/trimmed_fastq_small
-cp /project/spidercourse/Data/ecoli-analysis/data/trimmed_fastq_small/*fastq data/trimmed_fastq_small/
+cp /project/surfadvisors/Data/ecoli-analysis/data/trimmed_fastq_small/*fastq data/trimmed_fastq_small/
 ls data/trimmed_fastq_small
 
 mkdir results
