@@ -107,4 +107,20 @@ sbatch --job-name=var-call-tmpdir -J 'var-call-tmpdir' --output=%x-%j.out job-su
 > * You need to rerun the previous example with data in the project space by adding the 'time' command.
 > * Does the $TMPDIR example have better performance? When is it advantageous to use it?
 
+To test the status of your job you can run the command
+
+```sh
+squeue -u $USER
+```
+
+If your job has finished you can check the output log for errors
+
+```sh
+cat var-call-tmpdir-jobID.out #replace the jobID
+
+#Another check would be the output of the following command
+grep -v "#" $HOME/ecoli-analysis-tmpdir/results/vcf/SRR2589044_final_variants.vcf | wc -l
+
+#The answer should be 10 (the number if expected variants detected in this population)
+
 In this example you used the SSD available locally on the worker nodes instead of having your data on the shared project spaces. For large datasets and heavy processing (particularly heavy I/O), the overall gain in using the scratch space can be higher.
