@@ -11,7 +11,8 @@ led by Richard Lenski to assess adaptation in E. coli. A population was propagat
 glucose-limited minimal medium. 
 - We will be working with three sample events from the Ara-3 strain of this experiment, 
 one from 5,000 generations, one from 15,000 generations, and one from 50,000 generations to study how the population changed.
-- You will download a small set of data that has already been trimmed and will run the variant calling workflow using these additional features:
+- The instructions data and software management for the examples below are included in each example and the examples run independently.
+- You will download a small set of data that has already been trimmed and will run the variant calling workflow using these additional features
 
 1. [Analysis on local scratch space on worker nodes](https://github.com/sara-nl/spidercourse/blob/master/extras/tmpdir-usage.md)
 
