@@ -29,10 +29,12 @@ can be run independently. So pick your favourite feature:
 
 2. Using Jupyter notebooks (ND)
 
-3. Infinite partition for long running jobs (RO)
+3. Infinite partition for long running jobs (RO)slide
 
 4. Softdrive for software distribution (ND - if possible)
 
 5. System performance - Pretty graphs fio example tmpdir cephfs (RO - for advisors pilot) also add massive scaling 
 
 6. Potential LOFAR pilot framework (RO)
+
+7. analysis on a VM on HPC (ND)
