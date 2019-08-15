@@ -15,11 +15,13 @@ a small set of data that has already been trimmed and will run the variant calli
 The instructions for data and software management for the examples below are already included in each example and the examples 
 can be run independently. So pick your favourite feature:
 
-1. [Analysis on local scratch space on worker nodes](https://github.com/sara-nl/spidercourse/blob/master/extras/tmpdir-usage-adv.md)
+1. [Analysis in project spaces](https://github.com/sara-nl/spidercourse/blob/master/extras/cephfs-usage-adv.md)
 
-2. [Analysis with containers](https://github.com/sara-nl/spidercourse/blob/master/extras/singularity-usage-adv.md)
+2. [Analysis on local scratch space on worker nodes](https://github.com/sara-nl/spidercourse/blob/master/extras/tmpdir-usage-adv.md)
 
-3. [Accessing data from external storage systems](https://github.com/sara-nl/spidercourse/blob/master/extras/macaroons-usage-adv.md)
+3. [Analysis with containers](https://github.com/sara-nl/spidercourse/blob/master/extras/singularity-usage-adv.md)
+
+4. [Accessing data from external storage systems](https://github.com/sara-nl/spidercourse/blob/master/extras/macaroons-usage-adv.md)
 
 ### 2. Testing advanced features with additional examples
 
