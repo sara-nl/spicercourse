@@ -32,4 +32,6 @@ The instructions for data and software management for the examples below are inc
 
 4. Softdrive for software distribution (ND - if possible)
 
+5. creare SC (RO+MK)
+
 5. System performance - Pretty graphs fio example tmpdir cephfs (RO - for advisors pilot) also add massive scaling 
