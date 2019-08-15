@@ -34,3 +34,5 @@ can be run independently. So pick your favourite feature:
 4. Softdrive for software distribution (ND - if possible)
 
 5. System performance - Pretty graphs fio example tmpdir cephfs (RO - for advisors pilot) also add massive scaling 
+
+6. Potential LOFAR pilot framework (RO)
