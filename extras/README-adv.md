@@ -1,4 +1,4 @@
-## Welcome bla bla bla
+## Welcome advisors bla bla bla
 
 #### 1. Getting familiar with Spider - point to a welcome to spider.md and then/ or directly to our wiki. Run the welcome-to-spider example
 
