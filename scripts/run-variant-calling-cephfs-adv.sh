@@ -10,6 +10,7 @@ mkdir -p data/trimmed_fastq_small
 cp /project/surfadvisors/Data/ecoli-analysis/data/trimmed_fastq_small/*fastq data/trimmed_fastq_small/
 ls data/trimmed_fastq_small
 
+mkdir -p $ecolipath/results
 cd $ecolipath/results
 
 genome=$ecolipath/data/ref_genome/ecoli_rel606.fasta
