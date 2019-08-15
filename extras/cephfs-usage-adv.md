@@ -11,7 +11,6 @@ cd ecoli-analysis-cephfs
 wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/job-submit-variant-calling-cephfs-adv.sh
 
 wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/run-variant-calling-cephfs-adv.sh
-mkdir results
 ```
 Let us inspect what theese scripts will do:
 
