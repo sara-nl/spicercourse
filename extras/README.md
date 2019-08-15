@@ -35,3 +35,5 @@ The instructions for data and software management for the examples below are inc
 5. creare SC (RO+MK)
 
 5. System performance - Pretty graphs fio example tmpdir cephfs (RO - for advisors pilot) also add massive scaling 
+
+6. analysis on HPC Cloud VM (ND)
