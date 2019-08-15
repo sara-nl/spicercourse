@@ -23,6 +23,9 @@ can be run independently. So pick your favourite feature:
 
 4. [Accessing data from external storage systems](https://github.com/sara-nl/spidercourse/blob/master/extras/macaroons-usage-adv.md)
 
+5. [Software distribution and analysis on Cloud](https://github.com/sara-nl/spidercourse/blob/master/extras/cloud-usage-adv.md)
+
+
 ### 2. Testing advanced features with additional examples
 
 1. Using Scientific catalogues (ND)
@@ -31,10 +34,7 @@ can be run independently. So pick your favourite feature:
 
 3. Infinite partition for long running jobs (RO)slide
 
-4. Softdrive for software distribution (ND - if possible)
-
 5. System performance - Pretty graphs fio example tmpdir cephfs (RO - for advisors pilot) also add massive scaling 
 
 6. Potential LOFAR pilot framework (RO)
 
-7. analysis on a VM on HPC (ND)
