@@ -29,8 +29,8 @@ ssh surfadvisorX@advisorspilot.usersupport-cloud.surf-hosted.nl
 cd $HOME
 mkdir ecoli-analysis-cloud
 cd ecoli-analysis-cloud/
-chmod u+x run-variant-calling-cloud-adv.sh
 wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/run-variant-calling-cloud-adv.sh
+chmod u+x run-variant-calling-cloud-adv.sh
 ./run-variant-calling-cloud-adv.sh
 ```
 
