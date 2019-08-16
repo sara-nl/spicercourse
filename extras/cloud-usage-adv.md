@@ -25,7 +25,7 @@ Bla bla bla ..
 Bla bla bla ..
 
 ```sh
-ssh surfadvisorX@advisorspilot.usersupport-cloud.surf-hosted.nl
+ssh username@spider.usersupport-cloud.surf-hosted.nl 
 cd $HOME
 mkdir ecoli-analysis-cloud
 cd ecoli-analysis-cloud/
