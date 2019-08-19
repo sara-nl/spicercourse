@@ -126,7 +126,7 @@ What happened? As you are not a Software manager :woman: (so not a part of the s
 
 #### 3.2 Miniconda installation
 
-We will use Miniconda; it is a package manager. We shall first install miniconda2 and then proceed to the installation of individual tools. The specific instructions for Software manager or regular users are marked accordingly, the generic instructions should be followed by everyone.  
+We will use Miniconda for this purpose. We shall first install miniconda2 and then proceed to the installation of individual tools. The specific instructions for Software manager or regular users are marked accordingly, the generic instructions should be followed by everyone.  
 
 :woman: As Software manager
  
