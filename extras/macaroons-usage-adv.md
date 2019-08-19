@@ -1,9 +1,17 @@
-### Accessing data from SURfsara's dCache storage system 
+### Integration with scalable external storage 
 
-You can download your raw data on Spider before you start your analysis. However, if you need to analyse data in excess of hundreds of TBs,
-wouldn't it be convenient to simply download the data to be analysed on the fly? This can be achieved thanks to SURFsara's large 
-storage system (hard disk storage with tape backend) that provides excellent network connection (upto 1200 Gbit/s) to Spider. 
-Here we will run a job where you will download the data directly on the worker node within the job, run the analysis and push the output to your home directory.
+
+We will be using a genomics pipeline example to demonstrate the integration capabilities of Spider with highly scalable external storage systems.
+
+The data we are going 
+to use is part of a long-term evolution experiment led by [Richard Lenski](https://en.wikipedia.org/wiki/E._coli_long-term_evolution_experiment)
+to assess adaptation in E. coli. A population was propagated for more than 50,000 
+generations in a glucose-limited minimal medium. We will be working with three sample events from the Ara-3 strain of this 
+experiment, one from 5,000 generations, one from 15,000 generations, and one from 50,000 generations to study how the 
+population changed. Generally, the quality of raw data is assessed and data is 'trimmed'. In this example, you will download 
+a small set of data that has already been trimmed and will run the variant calling workflow.  
+
+Let us download the scripts that will run the job for you:
 
 ```sh
 cd $HOME
