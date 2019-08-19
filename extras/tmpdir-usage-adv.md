@@ -1,9 +1,17 @@
-## Using local scratch on worker nodes
+## High throughput data processing model 
 
 
-The jobs that you can run on Spider may have input/output data located on your project space (on CephFS; Ceph File System). The 
-Spider worker nodes have a large scratch area on local SSD, particularly efficient for large I/O. Here we will run a job where
-you can copy input/output to/from this local scratch.
+We will be using a genomics pipeline example to test some of the high-throughput functionalities of Spider.
+
+The data we are going 
+to use is part of a long-term evolution experiment led by [Richard Lenski](https://en.wikipedia.org/wiki/E._coli_long-term_evolution_experiment)
+to assess adaptation in E. coli. A population was propagated for more than 50,000 
+generations in a glucose-limited minimal medium. We will be working with three sample events from the Ara-3 strain of this 
+experiment, one from 5,000 generations, one from 15,000 generations, and one from 50,000 generations to study how the 
+population changed. Generally, the quality of raw data is assessed and data is 'trimmed'. In this example, you will download 
+a small set of data that has already been trimmed and will run the variant calling workflow.
+
+Let us download the scripts that will run the job for you:
 
 ```sh
 cd $HOME
