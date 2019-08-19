@@ -209,7 +209,7 @@ ls -l
 
 > **_Food for brain:_**
 >
-> * So you created this folder but possibly someone else became the owner. Any idea why? Hint: This is a "Shared" directory.
+> * So you created this folder but someone else might create a directory with the same name and overwrite yours. Any idea why? 
 > * Can you delete the directories/files not owned by you? Hint: Be careful and be nice!
 
 So the etiquette to keep in mind when using the Share folder is that you can acidentally delete/overwrite someone else's
