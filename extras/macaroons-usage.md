@@ -101,6 +101,8 @@ cp -r $TMPDIR/var-calling/results $HOME/ecoli-analysis-dcache/
 > * Is this data freely available to anyone? Try copying the link in a browser on your laptop and see what happens.
 > * Dosen't look like it requires any authentication. What if your data cannot be publicly made available?
 
+The E. coli probably do not mind their data being public but we are all very aware of data privacy - and this is not the case only for genomic data but research data in most domains. So how was the authnetication performed for your input data? 
+
 The data was shared with you with Macaroons - these are bearer tokens that you can use to authorize someone to dwonload/upload/delete data stored on dCache. These macaroons can be used with clients that can support bearer tokens (e.g., curl, Rclone). For this exercise a macaroon was created with certain restrictions (called as caveats) on the lifetime of the macaroon, the IP address you can use the macaroon from, the file that you can access, etc. Depending on who you want to share the data with, for how long and from which systems, these caveats can be adjusted. 
 
 You can check the status of the job and inspect the output log file (even if the job is not completed).
