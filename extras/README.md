@@ -16,11 +16,11 @@ one from 5,000 generations, one from 15,000 generations, and one from 50,000 gen
 The instructions for data and software management for the examples below are included in each example and the examples can be run independently.
 
 
-1. [Analysis on local scratch space on worker nodes](https://github.com/sara-nl/spidercourse/blob/master/extras/tmpdir-usage.md)
+1. [Analysis on local scratch space on worker nodes](tmpdir-usage.md)
 
-2. [Analysis with containers](https://github.com/sara-nl/spidercourse/blob/master/extras/singularity-usage.md)
+2. [Analysis with containers](singularity-usage.md)
 
-3. [Accessing data from external storage systems](https://github.com/sara-nl/spidercourse/blob/master/extras/macaroons-usage.md)
+3. [Accessing data from external storage systems](macaroons-usage.md)
 
 ### 2. Testing advanced features with additional examples
 
