@@ -199,7 +199,7 @@ You can see that now the job runs properly!
 
 ### <a name="share-data"></a> 4. Sharing results in a project
 
-You have already been introduced to the Data and Software project spaces and the associated roles. A shared Data folder reduces unnecessary replicas of the same data, and having a dats manager to handle the data reduces the risk of accidental removal. However, you also need a space where the results can be shared and the benefits are twofold - not everyone needs to run the same analysis (and co-ordinate on how this can be done uniformly) and the results can be used for a variety of post processing without the hassle of transfering the data to each other. This functionality is provided by the Shared project space.
+You have already been introduced to the Data and Software project spaces and the associated roles. A shared Data folder reduces unnecessary replicas of the same data, and having a data manager to handle the data reduces the risk of accidental removal. However, you also need a space where the results can be shared and the benefits are twofold - not everyone needs to run the same analysis (and co-ordinate on how this can be done uniformly) and the results can be used for a variety of post processing without the hassle of transfering the data to each other. This functionality is provided by the Shared project space.
 
 ```sh
 cd /project/spidercourse/Share
