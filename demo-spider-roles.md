@@ -238,7 +238,7 @@ For the last two tools you can see that a library is missing! This will very oft
 ```sh
 nano $HOME/.bashrc
 
-#In the conda initialize set up replace all the paths 
+In the conda initialize set up replace all the paths after the following line
 
 # >>> conda initialize >>>
 
@@ -246,11 +246,11 @@ replace the following path in your file
 
 $HOME/ecoli-analysis-software/miniconda2/bin/conda
 
-with the following path instead
+with the following path 
 
 /project/spidercourse/Software/ecoli-analysis-software/miniconda2/bin/conda
 
-#Similarly change the other respective paths directing to the Software in project space
+Similarly change the other respective paths directing to the Software in project space
 
 save the changes
 
