@@ -233,7 +233,7 @@ samtools        (utility for manipulating data in the SAM format)
 bcftools        (variant calling tool)
 ```
 
-For the last two tools you can see that a library is missing! This will very often be the case that not every default installation will run on every system - some dependencies might be missing and would require troubleshooting. If the Software manager resolves these issues, users can freely use the software and avoid hassles of resolving software dependencies. In this case, the Softare manager has already resolved this for you and instead of troubleshooting you can already start using this installation by performing the following steps:
+For the last two tools you can see that a library is missing! This will very often be the case that not every default installation will run on every system - some dependencies might be missing and would require troubleshooting. If the Software manager resolves these issues, users can freely use the software and avoid hassles of resolving software dependencies. In this case, the Software manager has already resolved this for you and instead of troubleshooting you can already start using this installation by performing the following steps:
 
 ```sh
 nano $HOME/.bashrc
