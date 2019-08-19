@@ -246,7 +246,7 @@ grep -v "#" results/vcf/SRR2589044_final_variants.vcf | wc -l
 > **_Food for brain:_**
 >
 > * How many variants are detected in each file? 
-> * Solution: For SRR2589044 from generation 5000 there were 10 mutations, for SRR2584863 from generation 15000 there were 25 mutations, and SRR2584866 from generation 766 mutations. In the last generation, a hypermutable phenotype had evolved, causing this strain to have more mutations.
+> * Solution: For SRR2589044 from generation 5000 there were 10 mutations, for SRR2584863 from generation 15000 there were 25 mutations, and SRR2584866 from generation 50000 had 766 mutations. In the last generation, a hypermutable phenotype had evolved, causing this strain to have more mutations.
 
 Now that you finished your analysis for a small dataset, shall we see how much resources did you use on the cluster? You can use the following command to find this information:
 
