@@ -52,9 +52,15 @@ ls -la my-awesome-notebook/
 
 > Where is your Notebook running? Can you guess what is the temporary and persistent storage used by your notebooks?
 
-* Let's assume that one of your colleagues has prepared a Notebook for you to reproduce his results. Click [here](TODO nb file) to download `my-research-notebook` to your laptop and then upload it to your Spider notebook for further use. 
+* Let's assume that one of your colleagues has prepared a Notebook for you to reproduce his results. Download `my-research-notebook` to your home for further use:
 
-* Run the examples in `my-research-notebook`. Each cell can be selected by clicking on it, and can be executed by clicking on the 'Run' icon on the top of the page, or by pressing Shift + Enter.
+```
+cd $HOME/my-awesome-notebook
+wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/extras/my-research-notebook.ipynb
+ls -l
+```
+
+* Run the examples in `my-research-notebook` within your notebook. Each cell can be selected by clicking on it, and can be executed by clicking on the 'Run' icon on the top of the page, or by pressing Shift + Enter.
 
 > Recap and Food for brain:  
 > - Spider Notebooks can be used by any user of the Spider platform. Can this feature be requested separetely (i.e. without having a Spider project)?  
