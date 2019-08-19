@@ -75,7 +75,7 @@ Let us now download the data
  curl -O ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/006/SRR2584866/SRR2584866_1.fastq.gz
  curl -O ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/006/SRR2584866/SRR2584866_2.fastq.gz 
  
- #Sometimes the ftp server is rather slow. In this case to save tim e you can copy the data from a local folder where we have downloaded the files for you already
+ #Sometimes their ftp server is rather slow. In this case to save time you can copy the data from a local folder where we have downloaded the files for you already
  cp /project/spidercourse/Data/ecoli-analysis/data/untrimmed_fastq/*fastq.gz .
  
  ```
