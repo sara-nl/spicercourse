@@ -18,12 +18,13 @@ the software environment that you 'may' have used earlier.
 cd $HOME
 nano .bashrc
 
-#Please uncomment all the lines (add # at the start of the line) after the following line in this file (if you have any)
+#Please comment out all the lines (add # at the start of the line) after the following line in this file (if you have any)
+
 # User specific aliases and functions
 # >>> conda initialize >>>
 ...
 
-#Save and Exit
+# After performing this action Save and Exit the file
 
 exit
 ```
