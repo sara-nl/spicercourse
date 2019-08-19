@@ -1,6 +1,8 @@
 ##  Collaboration within your project
 
-We will be using a genomics pipeline example to test some of the collaboration functionalities of Spider. The data we are 
+We will be using a genomics pipeline example to test some of the collaboration functionalities of Spider. 
+
+The data we are 
 going to use is part of a long-term evolution experiment led by [Richard Lenski](https://en.wikipedia.org/wiki/E._coli_long-term_evolution_experiment)
 to assess adaptation in E. coli. A population was propagated for more than 50,000 
 generations in a glucose-limited minimal medium. We will be working with three sample events from the Ara-3 strain of this 
