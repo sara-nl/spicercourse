@@ -11,57 +11,40 @@ Let us first inspect what version of singularity is available on the system
 singularity version
 ```
 
-In this example we will directly provide you a read-only singularity image and run the same workflow. Let us get started with resetting 
-the software environment that you 'may' have used earlier.
-
-```sh
-cd $HOME
-nano .bashrc
-
-#Please uncomment all the lines (add # at the start of the line) after the following line in this file (if you have any)
-# User specific aliases and functions
-# >>> conda initialize >>>
-...
-
-#Save and Exit
-
-exit
-```
-
-Please login to Spider again and check if the previously used software is still available to you
+In this example we will directly provide you a read-only singularity image and run the workflow. Please login to Spider again and check if the required software is available to you
 
 ```
 fastqc -h
 trimmomatic
 ```
 
-This will throw errors which means that the software is no longer available to you. Let us now download the scripts to run jobs that will use the Singularity containers
+This will throw errors which means that the software is not available to you. Let us now download the scripts to run jobs that will use the Singularity containers
 
 ```sh
 cd $HOME
 mkdir ecoli-analysis-container
 cd ecoli-analysis-container
-wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/job-submit-variant-calling-singularity.sh
+wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/job-submit-variant-calling-singularity-adv.sh
 
-wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/run-variant-calling-singularity.sh
+wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/run-variant-calling-singularity-adv.sh
 ```
 
-Let us see how the scripts set the software environment. The job-submit-variant-calling-singularity.sh script does not set the software environemnt here. So, let us inspect the script that runs the analysis
+Let us see how the scripts set the software environment. The job-submit-variant-calling-singularity-adv.sh script does not set the software environemnt here. So, let us inspect the script that runs the analysis
 
 ```sh
-cat run-variant-calling-singularity.sh
+cat run-variant-calling-singularity-adv.sh
 
 #!/bin/bash
-set -e
 set -x
+set -e
 ecolipath=$HOME/ecoli-analysis-container
 
 mkdir -p data/ref_genome
-cp /project/spidercourse/Data/ecoli-analysis/data/ref_genome/ecoli_rel606.fasta data/ref_genome/
+cp /project/surfadvisors/Data/ecoli-analysis/data/ref_genome/ecoli_rel606.fasta data/ref_genome/
 ls data/ref_genome
 
 mkdir data/trimmed_fastq_small
-cp /project/spidercourse/Data/ecoli-analysis/data/trimmed_fastq_small/*fastq data/trimmed_fastq_small/
+cp /project/surfadvisors/Data/ecoli-analysis/data/trimmed_fastq_small/*fastq data/trimmed_fastq_small/
 ls data/trimmed_fastq_small
 
 mkdir results
@@ -107,7 +90,7 @@ for fq1 in $ecolipath/data/trimmed_fastq_small/*_1.trim.sub.fastq
     #Filter the SNPs for the final output in VCF format
     singularity exec $ecolipath/elixir-singularity.sif vcfutils.pl varFilter $variants > $final_variants
    
-    done
+done
  ```
 
 > **_Food for brain:_**
@@ -119,10 +102,10 @@ for fq1 in $ecolipath/data/trimmed_fastq_small/*_1.trim.sub.fastq
 ```
 #Copy the container to the location as expected in the script
 
-cp /project/spidercourse/Software/elixir-singularity.sif  $HOME/ecoli-analysis-container
+cp /project/surfadvisors/Software/elixir-singularity.sif  $HOME/ecoli-analysis-container
 
 #Make sure the path to store the results in the variant calling script does not already have the results when you run the job
-sbatch --job-name=var-call-singularity -J 'var-call-singularity' --output=%x-%j.out job-submit-variant-calling-singularity.sh
+sbatch --job-name=var-call-singularity -J 'var-call-singularity' --output=%x-%j.out job-submit-variant-calling-singularity-adv.sh
 ```
 
 Did the analysis run successfully? To test the status of your job you can run the command
@@ -145,3 +128,4 @@ grep -v "#" $HOME/ecoli-analysis-container/results/vcf/SRR2589044_final_variants
 You got the same results as earlier examples with the container without setting a single path for your software! 
 
 Wondering how the container was built? You can find the recipe [here](https://raw.githubusercontent.com/sara-nl/spidercourse/master/extras/singularity-recipe). This container was built on Singularity version 3.2.1-1 (on macOS Mojave running Vagrant). Using containers is simple but you should bear in mind that it should be properly built with all the required dependencies, and should be updated regularly and tested in the runtime environment. 
+

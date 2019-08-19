@@ -1,22 +1,30 @@
-## Using local scratch on worker nodes
+## High throughput data processing model 
 
 
-The jobs that you can run on Spider may have input/output data located on your project space (on CephFS; Ceph File System). The 
-Spider worker nodes have a large scratch area on local SSD, particularly efficient for large I/O. Here we will run a job where
-you can copy input/output to/from this local scratch.
+We will be using a genomics pipeline example to test some of the high-throughput functionalities of Spider.
+
+The data we are going 
+to use is part of a long-term evolution experiment led by [Richard Lenski](https://en.wikipedia.org/wiki/E._coli_long-term_evolution_experiment)
+to assess adaptation in E. coli. A population was propagated for more than 50,000 
+generations in a glucose-limited minimal medium. We will be working with three sample events from the Ara-3 strain of this 
+experiment, one from 5,000 generations, one from 15,000 generations, and one from 50,000 generations to study how the 
+population changed. Generally, the quality of raw data is assessed and data is 'trimmed'. In this example, you will download 
+a small set of data that has already been trimmed and will run the variant calling workflow.
+
+Let us download the scripts that will run the job for you:
 
 ```sh
 cd $HOME
 mkdir ecoli-analysis-tmpdir
 cd ecoli-analysis-tmpdir
-wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/job-submit-variant-calling-tmpdir.sh
+wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/job-submit-variant-calling-tmpdir-adv.sh
 
-wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/run-variant-calling-tmpdir.sh
+wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/run-variant-calling-tmpdir-adv.sh
 ```
 We copy the files and scripts to the local scratch space on the worker node where your job lands. Let us inspect these scripts.
 
 ```sh
-cat job-submit-variant-calling-tmpdir.sh
+cat job-submit-variant-calling-tmpdir-adv.sh
 
 #!/bin/bash
 #SBATCH -c 1
@@ -25,27 +33,34 @@ cat job-submit-variant-calling-tmpdir.sh
 mkdir "$TMPDIR"/var-calling
 cd "$TMPDIR"/var-calling
 
-cp $HOME/ecoli-analysis-tmpdir/run-variant-calling-tmpdir.sh .
+cp $HOME/ecoli-analysis-tmpdir/run-variant-calling-tmpdir-adv.sh .
 
-export PATH="/project/spidercourse/Software/ecoli-analysis-software/miniconda2/bin:$PATH"
+export PATH="/project/surfadvisors/Software/ecoli-analysis-software/miniconda2/bin:$PATH"
 
-time bash run-variant-calling-tmpdir.sh 
+time bash run-variant-calling-tmpdir-adv.sh 
+
 ```
 Here we first created a directory with the help of a globally defined variable $TMPDIR. This directory will be created at the start of the job on the local scratch space and removed when the job is done. We copy the variant calling script to this directory and run it. To compare the performance with jobs that ran with data located on the project spaces, we will 'time' the job - this will tell us how long it took for the full job to finish.
 
+Let us submit the job first and then inspect the steps while the job runs
+
 ```sh
-cat run-variant-calling-tmpdir.sh
+sbatch --job-name=var-call -J 'var-call' --output=%x-%j.out job-submit-variant-calling-tmpdir-adv.sh
+squeue -u $USER
+
+cat run-variant-calling-tmpdir-adv.sh
 
 #!/bin/bash
 set -e
+set -x
 ecolipath=$PWD
 
 mkdir -p data/ref_genome
-cp /project/spidercourse/Data/ecoli-analysis/data/ref_genome/ecoli_rel606.fasta data/ref_genome/
+cp /project/surfadvisors/Data/ecoli-analysis/data/ref_genome/ecoli_rel606.fasta data/ref_genome/
 ls data/ref_genome
 
 mkdir data/trimmed_fastq_small
-cp /project/spidercourse/Data/ecoli-analysis/data/trimmed_fastq_small/*fastq data/trimmed_fastq_small/
+cp /project/surfadvisors/Data/ecoli-analysis/data/trimmed_fastq_small/*fastq data/trimmed_fastq_small/
 ls data/trimmed_fastq_small
 
 mkdir results
@@ -85,13 +100,7 @@ for fq1 in $ecolipath/data/trimmed_fastq_small/*_1.trim.sub.fastq
 
 cp -r $TMPDIR/var-calling/results $HOME/ecoli-analysis-tmpdir/
 ```
-Here we copy the input data to the $TMPDIR. The parent paths are redefined and hence the rest of the workflow remains the same. In the end we copy the output to our $HOME directory as the $TMPDIR is removed after thew job finishes and we will lose our results. You can run this example and compare if the performance was better/worse/equivalent to the performance with the jobs when the data is in project spaces.
-
-```sh
-#Make sure the path to store the results in the variant calling script does not already have the results
-
-sbatch --job-name=var-call-tmpdir -J 'var-call-tmpdir' --output=%x-%j.out job-submit-variant-calling-tmpdir.sh
-```
+Here we copy the input data to the $TMPDIR. In the end we copy the output to our $HOME directory as the $TMPDIR is removed after thew job finishes amd we will lose our results. You can compare if the performance was better/worse/equivalent to the performance with the jobs when the data is in project spaces.
 
 > **_Food for brain:_**
 >

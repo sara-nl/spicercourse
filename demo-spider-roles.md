@@ -74,6 +74,10 @@ Let us now download the data
  curl -O ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/003/SRR2584863/SRR2584863_2.fastq.gz
  curl -O ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/006/SRR2584866/SRR2584866_1.fastq.gz
  curl -O ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR258/006/SRR2584866/SRR2584866_2.fastq.gz 
+ 
+ #Sometimes the ftp server is rather slow. In this case to save tim e you can copy the data from a local folder where we have downloaded the files for you already
+ cp /project/spidercourse/Data/ecoli-analysis/data/untrimmed_fastq/*fastq.gz .
+ 
  ```
 
 Let us also download the reference genome for E. coli REL606.
@@ -303,6 +307,7 @@ cat data_qc.sh
 
 #!/bin/bash
 set -e
+set -x
 
 #if you are a data manager, uncomment the following line (remove the #)
 #ecolipath=/project/spidercourse/Data/ecoli-analysis
@@ -350,10 +355,8 @@ In this job, we have run `FASTQC` program to assess read quality and generate th
 
 ```sh
 cd /project/spidercourse/Public/
-ls
+ls ecoli-analysis
 ```
-
-The Public directory is yet another project space that can be accessed by not only all Spider users but is open to anyone.  This public space is exposed to the web under the domain: https://public.spider.surfsara.nl/project/[PROJECTNAME]/. To view the files go to https://public.spider.surfsara.nl/project/spidercourse/ link from the browser on your laptop. You can view one of the files in the ecoli-analysis folder and [study](https://datacarpentry.org/wrangling-genomics/02-quality-control/index.html) the quality of the data we have.
 
 The Public project space makes data sharing very easy and fast, particularly with your colleagues who are not a part of the project on Spider. 
 
