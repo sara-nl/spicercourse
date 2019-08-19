@@ -1,6 +1,12 @@
-## Running data analysis in project spaces
+##  Collaboration within your project
 
-You may have already made yourself familiar with the project spaces on Spider (If not, don't worry). In this example you will make use of the collaborative features. So let's dig in.
+We will be using a genomics pipeline example to test some of the collaboration functionalities of Spider. The data we are 
+going to use is part of a long-term evolution experiment led by [Richard Lenski](https://en.wikipedia.org/wiki/E._coli_long-term_evolution_experiment)
+to assess adaptation in E. coli. A population was propagated for more than 50,000 
+generations in a glucose-limited minimal medium. We will be working with three sample events from the Ara-3 strain of this 
+experiment, one from 5,000 generations, one from 15,000 generations, and one from 50,000 generations to study how the 
+population changed. Generally, the quality of raw data is assessed and data is 'trimmed'. In this example, you will download 
+a small set of data that has already been trimmed and will run the variant calling workflow.
 
 Let us download the scripts that will run the job for you - one script for setting the job environment that calls the script that runs the analysis.
 
