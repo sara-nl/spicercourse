@@ -22,7 +22,7 @@ Each project on Spider gets its own project space. Let us get familiar with this
 ### <a name="spider-dm"></a> 2. Data management
 
 #### 2.1 Data manager Role :information_desk_person:
-
+<!---https://gist.github.com/rxaviers/7360908   this is where I got the emojis from--->
  ```sh
  id $USER
  ```
