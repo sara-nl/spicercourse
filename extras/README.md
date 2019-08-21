@@ -1,8 +1,6 @@
 ## Testing advanced features of Spider
 This section includes several different features of the platform. It consists of several parts and each part contains an example that can be run independently. You can run the examples in the proposed sequence or simply pick your favourite flavor to start exploring the Spider features!
 
-This section includes several different features of the platform. It consists of several parts and each part contains an example that can be run independently. You can run the examples in the proposed sequence or simply pick your favourite flavor to start exploring the Spider features!
-
 ### High throughput data processing model
 
 Spider is a high-throughput data-processing platform which means enabling processing of large structured data sets in short time spans. A method to achieve efficient data I/O is to split up the data processing pipelines into many parallel independent jobs where each job retrieves a chunk of data to process on the *local scratch* storage of a worker node (e.g. SSDs). This data processing model is called `embarrassingly parallel` jobs, or else the known `Grid processing model`.
@@ -61,7 +59,7 @@ Recompiling your software every time you switch processing platforms or moving d
 
 Interested? Try out the example [here](extras/cloud-usage.md).
 
-# 4. Feedback
+## Feedback
 
 We hope that you enjoyed your first journey with Spider! You probably have some feedback for the platform and we would like to hear this :)
 
