@@ -34,7 +34,7 @@ Anyone who wants to start processing large data volumes (tens to hundreds of ter
 
 14:45 - 15:00 - Coffee
 
-15:00 - 16:15 - [Running data analysis and using collaboration features](run-spider-jobs.md)
+15:00 - 16:15 - [Running data analysis](run-spider-jobs.md)
 
 16:15 - 17:00 - [Additional features on the platform and conclusion](extras/README.md)
 
