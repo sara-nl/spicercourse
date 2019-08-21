@@ -1,14 +1,14 @@
 # Logging onto Spider
 
-Here are your first steps:
+In this section you will login to the platform and familiarise yourself with your working environment:
 
 1. [Login to Spider](#spider-login)
 2. [Get familiar with the login node](#spider-env)
-3. [Submit jobs](#job-submit)
+3. [Submit your first job](#job-submit)
 
 ### <a name="spider-login"></a> 1. Login to Spider
 
-The login credentials (e.g., spidercourse-g01) will be  provided to you at the start of the session. Open a terminal in your laptop 
+The login credentials (e.g., spidercourse-g01) will be provided to you at the start of the session. Open a terminal in your laptop 
     
  ```sh
  ssh username@spider.surfsara.nl #replace `username` with the username assigned to you
@@ -16,7 +16,7 @@ The login credentials (e.g., spidercourse-g01) will be  provided to you at the s
   
 ### <a name="spider-env"></a> 2. Get familiar with the login node
 
-Familiarize yourself with your environment :
+Familiarize yourself with your environment:
 
  ```sh
  whoami
@@ -29,11 +29,10 @@ Familiarize yourself with your environment :
 >
 > * What does the output of the command "id $USER" tell you?
 > * How many worker nodes are available on the cluster?
+> * How many cores per worker node are available on the cluster? Hine: Try the command "scontrol show node"
 
 
 ### <a name="job-submit"></a> 3. Submit your first job
-
-#### 3.1 Submit a simple job 
 
 Let us download our first job script and inspect it:
   
