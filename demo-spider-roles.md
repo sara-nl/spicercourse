@@ -1,5 +1,7 @@
 # Spider project spaces and roles
 
+The Spider environment is optimised for collaboration. Every user of the platform is member of a project and every project in Spider gets an individual workspace where the project members can collaborate by sharing data, software or workflows. In this section you will work with some of these features to get your raw data, install software and prepare/cleanup the data for analysis.
+
 1. [Spider project environment](#spider-spaces)
 2. [Data management](#spider-dm)
 3. [Software management](#spider-sm)
