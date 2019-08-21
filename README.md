@@ -38,5 +38,5 @@ Anyone who wants to start processing large data volumes (tens to hundreds of ter
 
 16:15 - 16:45 - [Additional features on the platform](extras/README.md)
 
-16:45 - 17:00 - [Conclusion]
+16:45 - 17:00 - Conclusion
 
