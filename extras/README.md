@@ -1,14 +1,11 @@
 ## Testing advanced features of Spider
 This section includes several different features of the platform. It consists of several parts and each part contains an example that can be run independently. You can run the examples in the proposed sequence or simply pick your favourite flavor to start exploring the Spider features!
 
-  * [Collaboration within your project](#collaboration-within-your-project)
   * [High throughput data processing model](#high-throughput-data-processing-model)
-  * [Interactive analysis with Jupyter Notebooks](#interactive-analysis-with-jupyter-notebooks)
   * [Software portability with containers](#software-portability-with-containers)
   * [Integration with scalable external storage](#integration-with-scalable-external-storage)
+  * [Interactive analysis with Jupyter Notebooks](#interactive-analysis-with-jupyter-notebooks)
   * [Interoperability with existing platforms](#interoperability-with-existing-platforms)
-  * [Performance of staging and scratch area](#performance-of-staging-and-scratch-area)
-  * [Bring your own example](#bring-your-own-example)
 * [Feedback](#4-feedback)
 
 ### High throughput data processing model
@@ -75,4 +72,4 @@ We hope that you enjoyed your first journey with Spider! You probably have some 
 
 Please fill in the survey [here]. It will take you less than 5 minutes but help us a lot!
 
-
+The docuemntation for the Spider platform can be found [here](http://doc.spider.surfsara.nl/en/latest/). You can contact us with any questions by writing to helpdesk@surfsara.nl.
