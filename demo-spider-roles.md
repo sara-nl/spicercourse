@@ -363,6 +363,8 @@ The Public directory is yet another project space that can be accessed by not on
 
 The Public project space makes data sharing very easy and fast, particularly with your colleagues who are not a part of the project on Spider. 
 
+Now that you have your data and software in place, let us move to the [next](https://github.com/sara-nl/spidercourse/blob/master/run-spider-jobs.md) section to run the analysis.
+
 #### Acknowledgements 
 This example was adopted from https://datacarpentry.org/wrangling-genomics/ 
 
