@@ -59,3 +59,4 @@ Now that you have inspected the script that will submit your job, let's submit i
  scancel 12345 #Replace 12345 with your corresponding jobID
  ```
  
+Let us move to the [next](https://github.com/sara-nl/spidercourse/blob/master/demo-spider-roles.md) section where you will explore the Spider platform further.
