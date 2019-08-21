@@ -61,7 +61,7 @@ Interested? Try out the example [here](extras/cloud-usage.md).
 
 ## Feedback
 
-We hope that you enjoyed your first journey with Spider! You probably have some feedback for the platform and we would like to hear this :)
+We hope that you enjoyed your first journey with Spider! You probably have some feedback for the platform as well as the course and we would like to hear this :)
 
 Please fill in the survey [here]. It will take you less than 5 minutes but help us a lot!
 
