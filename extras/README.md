@@ -1,6 +1,16 @@
 ## Testing advanced features of Spider
 This section includes several different features of the platform. It consists of several parts and each part contains an example that can be run independently. You can run the examples in the proposed sequence or simply pick your favourite flavor to start exploring the Spider features!
 
+  * [Collaboration within your project](#collaboration-within-your-project)
+  * [High throughput data processing model](#high-throughput-data-processing-model)
+  * [Interactive analysis with Jupyter Notebooks](#interactive-analysis-with-jupyter-notebooks)
+  * [Software portability with containers](#software-portability-with-containers)
+  * [Integration with scalable external storage](#integration-with-scalable-external-storage)
+  * [Interoperability with existing platforms](#interoperability-with-existing-platforms)
+  * [Performance of staging and scratch area](#performance-of-staging-and-scratch-area)
+  * [Bring your own example](#bring-your-own-example)
+* [Feedback](#4-feedback)
+
 ### High throughput data processing model
 
 Spider is a high-throughput data-processing platform which means enabling processing of large structured data sets in short time spans. A method to achieve efficient data I/O is to split up the data processing pipelines into many parallel independent jobs where each job retrieves a chunk of data to process on the *local scratch* storage of a worker node (e.g. SSDs). This data processing model is called `embarrassingly parallel` jobs, or else the known `Grid processing model`.
