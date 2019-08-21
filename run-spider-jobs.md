@@ -1,4 +1,4 @@
-# Running jobs on Spider
+# Running data analysis on Spider
 
 
 1. [Set up job enviromment](#job-setup)
