@@ -262,3 +262,8 @@ sacct --format=JobID,JobName,AveCPU,Elapsed -S '2019-08-28' # sacct displays acc
 > * How can your work benefit from running on Spider e.g., with project spaces, public views? 
 
 To run this simple E.coli example you downloaded the raw data, installed the software, ran the analysis and shared your results while using some of the nice features of the system such as project spaces and different roles within a project.  Can you already think of how your workflows could run on Spider? How would your project benefit from the collaboration features? Spider offers several other advanced features that you can explore in the [next](https://github.com/sara-nl/spidercourse/blob/master/extras/README.md) section.
+
+
+
+#### Acknowledgements 
+This example was adopted from https://datacarpentry.org/wrangling-genomics/ 
