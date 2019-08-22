@@ -1,7 +1,7 @@
 ## Using local scratch on worker nodes
 
 
-In this section you will run a job where you can copy input/output to/from the local scratch.
+In this section you will run the same E. coli analysis example but you will run a job where you can copy input/output to/from the local scratch.
 
 ```sh
 cd $HOME
