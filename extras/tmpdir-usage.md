@@ -1,9 +1,7 @@
 ## Using local scratch on worker nodes
 
 
-The jobs that you can run on Spider may have input/output data located on your project space (on CephFS; Ceph File System). The 
-Spider worker nodes have a large scratch area on local SSD, particularly efficient for large I/O. Here we will run a job where
-you can copy input/output to/from this local scratch.
+In this section you will run a job where you can copy input/output to/from the local scratch.
 
 ```sh
 cd $HOME
