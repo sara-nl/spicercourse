@@ -18,10 +18,14 @@ chmod u+x run-variant-calling-cloud-adv.sh
 ./run-variant-calling-cloud-adv.sh
 ```
 
-* While your analysis is running inspect the script `run-variant-calling-cloud-adv.sh`. Where is your input data fetched from? Where is your software installed? How is the Software ported to this VM on HPC Cloud?
+* While your analysis is running inspect the script `run-variant-calling-cloud-adv.sh`.  
+
+You just ran the same pipeline on another system!
 
 > Food for brain:
-> - Run the same analysis on Spider. How would you submit the `run-variant` script to the cluster? Do you have to make any changes to your software or input data paths?  
+> - Where is your input data fetched from?
+> - Where is your software installed? 
+> - How is the Software ported to this VM on HPC Cloud?
 > - Think of other platforms to port the same analysis, e.g. Cartesius. Sketch your solution.
 
 Curious how this was set up? Wanna give it a go on your own laptop?
