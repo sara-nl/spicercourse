@@ -1,9 +1,6 @@
 ### Accessing data from SURfsara's dCache storage system 
 
-You can download your raw data on Spider before you start your analysis. However, if you need to analyse data in excess of hundreds of TBs,
-wouldn't it be convenient to simply download the data to be analysed on the fly? This can be achieved thanks to SURFsara's large 
-storage system (hard disk storage with tape backend) that provides excellent network connection (upto 1200 Gbit/s) to Spider. 
-Here we will run a job where you will download the data directly on the worker node within the job, run the analysis and push the output to your home directory.
+In this section you will run the same E. coli analysis but in the job where you will download the data directly on the worker node within the job, run the analysis and push the output to your home directory.
 
 ```sh
 cd $HOME
