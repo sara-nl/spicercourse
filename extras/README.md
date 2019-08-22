@@ -1,5 +1,5 @@
 ## Testing advanced features of Spider
-This section includes several different features of the platform. It consists of several parts and each part contains an example that can be run independently. You can run the examples in the proposed sequence or simply pick your favourite flavor to start exploring the Spider features!
+This section includes several different features of the platform. It consists of several parts and each part contains an example that can be run independently. You can run the examples in the proposed sequence or simply pick your favourite flavour to start exploring the Spider features!
 
   * [High throughput data processing model](#high-throughput-data-processing-model)
   * [Software portability with containers](#software-portability-with-containers)
