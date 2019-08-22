@@ -1,8 +1,6 @@
 ## Interactive analysis with Jupyter Notebooks
 
-Let's start our first Spider notebook! To make it easy, we have created a tool to allow users 
-launch Jupyter Notebooks. This is called `startnotebook` and can be invoked from the Spider User 
-Interface (UI).
+Let's start your first Spider notebook! 
 
 * Login to Spider and inspect the `startnotebook`  tool:
 
@@ -34,7 +32,7 @@ $ startnotebook --name my-awesome-notebook
 #	pass: OdL@@F>yQ:nQ
 ```
 
-> What happened? Behind the scenes, `startnotebook` submits a job to the SLURM cluster. The job executes a Singularity container, containing the Jupyter notebook. Once the job starts running the tool retrieves the host and port where the Jupyter notebook is running and provides you with the corresponding URL, and credentials to allow you access the notebook from your laptop.
+> What happened? Behind the scenes, `startnotebook` submits a job to the SLURM cluster. The job executes a Singularity container which contains the Jupyter notebook. Once the job starts running the tool retrieves the host and port where the Jupyter notebook is running and provides you with the corresponding URL, and credentials to allow you access the notebook from your laptop.
 
 * Open a browser in your laptop and copy the provided URL. Hit 'Enter' and paste the provided password. Once successfully logged in, start a new 'Python 3' notebook.
 
@@ -63,8 +61,7 @@ ls -l
 * Run the examples in `my-research-notebook` within your notebook. Each cell can be selected by clicking on it, and can be executed by clicking on the 'Run' icon on the top of the page, or by pressing Shift + Enter.
 
 > Recap and Food for brain:  
-> - Spider Notebooks can be used by any user of the Spider platform. Can this feature be requested separetely (i.e. without having a Spider project)?  
-> - We are using the Spider's SLURM cluster to power the Jupyter Notebooks. The resources used as long as the Notebook runs, but how are they accounted?  
+> - We are using the Spider's SLURM cluster to power the Jupyter Notebooks. The resources are used as long as the Notebook runs, but how are they accounted?  
 > - The Notebooks are disposable and not meant to be used for production runs. Idle Notebooks longer that 10 minutes would be forced to shutdown by default. Can this parameter be controled by the user, how?  
 > - The user can access his home, project-space data and cvmfs directories within the notebooks. Where should any persistent data  be saved to use after the notebook has been shut down?  
 > - The aim is to help Spider users easily launch Notebooks for testing, post-processing, visualisation, tutorials and collaboration. What possible use cases can you think of?  
