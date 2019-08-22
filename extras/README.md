@@ -18,7 +18,7 @@ This example will show you how to increase the I/O performance of your jobs by u
 - copy input/output data to/from a large scratch area on local SSD
 - make use of the globally defined variable `$TMPDIR`
 
-Interested? Try out the example [here](extras/tmpdir-usage.md).
+Interested? Try out the example [here](tmpdir-usage.md).
 
 ### Software portability with containers
 
