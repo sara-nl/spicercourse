@@ -28,7 +28,7 @@ Your analysis on Spider can be run with software that was installed either by th
 - employ the container into your workflows
 - run the analysis by using the software from a Singularity container
 
-Interested? Try out the example [here](extras/singularity-usage.md).
+Interested? Try out the example [here](singularity-usage.md).
 
 ### Integration with scalable external storage
 
@@ -40,7 +40,7 @@ This can be achieved thanks to `dCache macaroons` and the high-bandwidth connect
 - run your analysis by fetching data on the fly directly from dCache
 - evaluate options for large scale data analysis automation
 
-Interested? Try out the example [here](extras/macaroons-usage.md).
+Interested? Try out the example [here](macaroons-usage.md).
 
 ### Interactive analysis with Jupyter Notebooks
 
@@ -52,7 +52,7 @@ Let's see how to use Jupyter Notebooks on Spider. In this example, you will:
 - install packages within your Notebook or use existing software to run an analysis
 - display and publish your results
 
-Interested? Try out the example [here](extras/jupyter-usage.md).
+Interested? Try out the example [here](jupyter-usage.md).
 
 ### Interoperability with existing platforms
 
@@ -64,7 +64,7 @@ Recompiling your software every time you switch processing platforms or moving d
 - fetch our code from Github
 - run the same analysis on multiple platforms, no vendor lock-in
 
-Interested? Try out the example [here](extras/cloud-usage.md).
+Interested? Try out the example [here](cloud-usage.md).
 
 ## Feedback
 
