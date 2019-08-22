@@ -1,11 +1,6 @@
 ## Using singularity containers
 
-
-Your analysis can be run with software that was installed either by the software manager/sys admin of the system or yourself. What if you want to run 
-the same analysis on another system(s)? Or you want to simply test some workflow on Spider but don't want to install the  necessary software from scratch or mess up an existing installation? This is where
-containers can come in extremely handy. As you do not have admin rights on the system, we do not support Docker containers. But the good news is that we do support Singularity containers! Let us run the same E coli analysis but by importing software from a singularity  container.
-
-Let us first inspect what version of singularity is available on the system
+In this section you will run the same E coli analysis but by importing software from a singularity  container. Let us first inspect what version of singularity is available on the system
 
 ```sh
 singularity version
