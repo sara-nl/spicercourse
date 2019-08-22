@@ -24,6 +24,6 @@ chmod u+x run-variant-calling-cloud-adv.sh
 > - Run the same analysis on Spider. How would you submit the `run-variant` script to the cluster? Do you have to make any changes to your software or input data paths?  
 > - Think of other platforms to port the same analysis, e.g. Cartesius. Sketch your solution.
 
-> Curious how this was set up? 
->  - Install and configure CVMFS - follow the instructions [here](http://doc.grid.surfsara.nl/en/latest/Pages/Advanced/softdrive_on_laptop.html#softdrive-on-laptop)
->  - Install Singularity - follow the instructions [here](https://sylabs.io/guides/3.0/user-guide/installation.html) and install from source Singularity v3.1.0
+Curious how this was set up? Wanna give it a go on your own laptop?
+ - Install and configure CVMFS - follow the instructions [here](http://doc.grid.surfsara.nl/en/latest/Pages/Advanced/softdrive_on_laptop.html#softdrive-on-laptop)
+ - Install Singularity - follow the instructions [here](https://sylabs.io/guides/3.0/user-guide/installation.html) and install from source Singularity v3.1.0
