@@ -1,6 +1,6 @@
 ## Using singularity containers
 
-In this section you will run the same E coli analysis but by importing software from a singularity  container. Let us first inspect what version of singularity is available on the system
+In this section you will run the same E. coli analysis but by importing software from a singularity  container. Let us first inspect what version of singularity is available on the system
 
 ```sh
 singularity version
