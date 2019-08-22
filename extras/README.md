@@ -6,7 +6,6 @@ This section includes several different features of the platform. It consists of
   * [Integration with scalable external storage](#integration-with-scalable-external-storage)
   * [Interactive analysis with Jupyter Notebooks](#interactive-analysis-with-jupyter-notebooks)
   * [Interoperability with existing platforms](#interoperability-with-existing-platforms)
-* [Feedback](#4-feedback)
 
 ### High throughput data processing model
 
