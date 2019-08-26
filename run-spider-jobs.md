@@ -251,7 +251,7 @@ grep -v "#" results/vcf/SRR2589044_final_variants.vcf | wc -l
 Now that you finished your analysis for a small dataset, shall we see how much resources did you use on the cluster? You can use the following command to find this information:
 
 ```sh
-sacct -X --format=JobID,JobName,AveCPU,Elapsed -S '2019-08-28' # sacct displays accounting data for all jobs
+sacct --format=JobID,JobName,AveCPU,Elapsed -S '2019-08-28' # sacct displays accounting data for all jobs
 ```
 
 > **_Food for brain:_**
