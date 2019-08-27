@@ -17,7 +17,7 @@ From this workshop we hope that you have a good grasp of the purpose of the plat
    - :metal: software portablity and reproducability of your results
 - ran your analysis by fetching data on the fly directly from dCache with use of `dCache macaroons`
    - :muscle: Integration with scalable external storage
-- run the same analysis on multiple platforms (no vendor lock-in)
+- ran the same analysis on multiple platforms (no vendor lock-in)
    - :vulcan_salute: Interoperability with existing platforms
    
 > **_Food for brain:_**
