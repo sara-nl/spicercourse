@@ -6,6 +6,7 @@ This section includes several different features of the platform. It consists of
   * [Integration with scalable external storage](#integration-with-scalable-external-storage)
   * [Interactive analysis with Jupyter Notebooks](#interactive-analysis-with-jupyter-notebooks)
   * [Interoperability with existing platforms](#interoperability-with-existing-platforms)
+  * [Cross-project collaboration](#cross-project-collaboration)
 
 ### High throughput data processing model
 
@@ -64,6 +65,12 @@ Recompiling your software every time you switch processing platforms or moving d
 - run the same analysis on multiple platforms, no vendor lock-in
 
 Interested? Try out the example [here](cloud-usage.md).
+
+### Cross-project collaboration
+
+There are cases where different user groups work on projects with different scope and goals but need to (partly) share read-only data (such as biobank data, reference genomes). Spider offers a place for multiple project teams to collaborate. This workspace is called `scientific catalog`. The scientific catalog data can be either open to everyone on the platform or private to selected Spider project groups. 
+
+Interested? Check out an overview of scientific catalogs [here](https://github.com/sara-nl/spidercourse/blob/master/extras/scientific-catalog-view.md).
 
 ## Feedback
 
