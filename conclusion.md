@@ -27,7 +27,7 @@ From this workshop we hope that you have a good grasp of the purpose of the plat
 > * What features did you like/dislike?
 > * Do you miss any features?
 
-Spider is a high-throughput data-processing platform aimed at processing large structured data sets. Large scale analysis would mean not only a lot of data but also a lot of jobs to perform this analysis. It can get tricky to manage large number of jobs and the associated inout data and results. Can you think of how you would automate your workflows? We can provide a demo if you like.
+Spider is a high-throughput data-processing platform aimed at processing large structured data sets. Large scale analysis would mean not only a lot of data but also a lot of jobs to perform this analysis. It can get tricky to manage large number of jobs and the associated input data and results. Can you think of how you would automate your workflows? We can provide a demo if you like.
 
 # Feedback
 
