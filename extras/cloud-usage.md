@@ -11,8 +11,8 @@ In this example we have pre-configured a Virtual Machine with the necessary comp
 ```sh
 ssh username@spider.usersupport-cloud.surf-hosted.nl 
 cd $HOME
-mkdir ecoli-analysis-cloud
-cd ecoli-analysis-cloud/
+mkdir /cloud-analysis/$USER/ecoli-analysis-cloud
+cd /cloud-analysis/$USER/ecoli-analysis-cloud
 wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/run-variant-calling-cloud.sh
 chmod u+x run-variant-calling-cloud.sh
 ./run-variant-calling-cloud.sh
