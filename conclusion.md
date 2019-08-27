@@ -36,3 +36,7 @@ We hope that you enjoyed your first journey with Spider! You probably have alrea
 Please fill in the survey [here](https://forms.gle/J4K4eMMMj2WSHKtZ6). It will take you less than 5 minutes but help us a lot!
 
 <!---![Spider poster](/images/Spider_poster.png)>   
+
+# Want to know more about Spider?
+
+You may visit our documentatin page at http://doc.spider.surfsara.nl/en/latest/Pages/about.html. You can always contact us via email to helpdesk@surfsara.nl with any questions about the Spider platform or any other SURFsara services.
