@@ -1,4 +1,4 @@
-* Spider at a glance:
+# Spider at a glance:
 
 From this workshop we hope that you have a good grasp of the purpose of the platform. You worked on several features independently so lets have a look at the full picture. You have:
 
@@ -13,7 +13,7 @@ From this workshop we hope that you have a good grasp of the purpose of the plat
 - ran your analysis by fetching data on the fly directly from dCache with use of `dCache macaroons`
 - run the same analysis on multiple platforms (no vendor lock-in)
 
-* Feedback
+# Feedback
 
 We hope that you enjoyed your first journey with Spider! You probably have already gathered some feedback for the platform and we would like to hear this :)
 
