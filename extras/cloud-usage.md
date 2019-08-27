@@ -10,8 +10,7 @@ In this example we have pre-configured a Virtual Machine with the necessary comp
 
 ```sh
 ssh username@spider.usersupport-cloud.surf-hosted.nl 
-cd $HOME
-mkdir /cloud-analysis/$USER/ecoli-analysis-cloud
+mkdir -p /cloud-analysis/$USER/ecoli-analysis-cloud
 cd /cloud-analysis/$USER/ecoli-analysis-cloud
 wget https://raw.githubusercontent.com/sara-nl/spidercourse/master/scripts/run-variant-calling-cloud.sh
 chmod u+x run-variant-calling-cloud.sh
@@ -24,6 +23,7 @@ You just ran the same pipeline on another system!
 
 > Food for brain:
 > - Where is your input data fetched from?
+> - Where is your analysis running?
 > - Where is your software installed? 
 > - How is the Software ported to this VM on HPC Cloud?
 > - Think of other platforms to port the same analysis, e.g. Cartesius. Sketch your solution.
