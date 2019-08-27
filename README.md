@@ -28,15 +28,15 @@ Anyone who wants to start processing large data volumes (tens to hundreds of ter
 --------
 13:00 - 13:20 - Introduction to the high throughput platform
 
-13:20 - 13:45 - [Login to the platform](login-to-spider.md)
+13:20 - 13:30 - [Login to the platform](login-to-spider.md)
 
-13:45 - 14:45 - [Spider project spaces and roles](demo-spider-roles.md)
+13:30 - 14:30 - [Spider project spaces and roles](demo-spider-roles.md)
 
-14:45 - 15:00 - Coffee
+14:30 - 14:45 - Coffee
 
-15:00 - 16:00 - [Running data analysis](run-spider-jobs.md)
+14:45 - 15:45 - [Running data analysis](run-spider-jobs.md)
 
-16:00 - 16:45 - [Additional features on the platform](extras/README.md)
+15:45 - 16:30 - [Additional features on the platform](extras/README.md)
 
-16:45 - 17:00 - Conclusion
+16:30 - 17:00 - [Conclusion](conclusion.md)
 
