@@ -1,4 +1,4 @@
-# Spider at a glance:
+# Spider features you tested at a glance:
 
 From this workshop we hope that you have a good grasp of the purpose of the platform. You worked on several features independently so lets have a look at the full picture. You have:
 
