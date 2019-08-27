@@ -6,27 +6,26 @@ Let's take an example of two different projects, Project A: a group of researche
 
 ## Roles 
 
-Each project in this example has its own environment where the project members can collaborate by sharing data, software or workflows. The project team members are organised with different roles and mandates:
+Each project in this example has its own environment where the project members can collaborate by sharing data, software or workflows. The project team members are organized with different roles and mandates:
 
 * Data manager(s): designated data dissemination manager; responsible for the management of project-owned data
 * Software manager(s): designated software manager; responsible to install and maintain the project-owned software
 * Normal users: researchers who focus on their data analysis and visualization
 * External collaborators: researchers who don't have access to the platform but they can be given direct access (through a web link) in selected directories containing designated data products
 
-Each project may have also some projet-specific data on external storage managed by a different group that can be accessed through standard protocols and APIs (e.g. webdav, S3, sftp). 
+Each project may have also some project-specific data on external storage managed by a different group that can be accessed through standard protocols and APIs (e.g. webdav, S3, sftp). 
 
 Let's say now that the normal user groups of both project A Complex genetics and project B Clinical genetics need access to the same data. Instead of downloading multiple copies of the same data on the same platform, we keep a single copy UK Biobank data and arrange read-only access for both groups if they comply with the data regulations. Here, the `catalog manager` is responsible for populating the catalog and deciding which project groups have read access to the catalog.
 
 ## Permissions
 
-The table below summarises tje permissions on the different project directories:
+The table below summarizes the permissions on the different project directories:
 
 | Directories vs. Access Roles | /project/ProjectA/Data | /project/ProjectA/Software | /project/ProjectA/Share | /project/ProjectA/Public | /project/home/ProjectA-user | /catalog/UK-biobank |
 | -------------------------------|---|---|---|---|---|---|
 | Project A Data manager         |rwx|r-x|rwx|rwx|---|---|    
 | Project A Software manager     |r-x|rwx|rwx|rwx|---|---| 
 | Project A normal user          |r-x|r-x|rwx|rwx|rwx|r--|  
-| Project A external collaborator|---|---|---|r--|---|---|  
 | Project B normal user          |---|---|---|r--|---|r--|  
 | Catalog manager                |---|---|---|r--|---|rwx| 
 
