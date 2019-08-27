@@ -17,7 +17,7 @@ From this workshop we hope that you have a good grasp of the purpose of the plat
    - :metal: software portablity and reproducability of your results
 - ran your analysis by fetching data on the fly directly from dCache with use of `dCache macaroons`
    - :muscle: Integration with scalable external storage
-- ran the same analysis on multiple platforms (no vendor lock-in)
+- ran the same analysis on another platform (no vendor lock-in)
    - :vulcan_salute: Interoperability with existing platforms
    
 > **_Food for brain:_**
@@ -39,4 +39,4 @@ Please fill in the survey [here](https://forms.gle/J4K4eMMMj2WSHKtZ6). It will t
 
 # Want to know more about Spider?
 
-You may visit our documentatin page at http://doc.spider.surfsara.nl/en/latest/Pages/about.html. You can always contact us via email to helpdesk@surfsara.nl with any questions about the Spider platform or any other SURFsara services.
+You may visit our documentation page at http://doc.spider.surfsara.nl/en/latest/Pages/about.html. You can always contact us via email to helpdesk@surfsara.nl with any questions about the Spider platform or any other SURFsara services.
