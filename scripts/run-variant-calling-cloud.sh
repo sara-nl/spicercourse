@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
 set -e
-ecolipath=/cloud-analysis/${USER}/ecoli-analysis-cloud
+ecolipath=/cloud-analysis/$USER/ecoli-analysis-cloud
 singularitypath=/cvmfs/softdrive.nl/anatolid/spidercourse/
 
 cd $ecolipath
