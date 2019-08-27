@@ -6,7 +6,7 @@ In this example we have pre-configured a Virtual Machine with the necessary comp
 
 ### Run the analysis
 
-* Login to the pre-configured VM on HPC Cloud (ask for your username/password if you still don't have this). Once logged in download the analysis script and execute it:
+* Login to the pre-configured VM on HPC Cloud (ask the instructors for your username/password if you still don't have this). Once logged in download the analysis script and execute it:
 
 ```sh
 ssh username@spider.usersupport-cloud.surf-hosted.nl 
