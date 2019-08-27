@@ -11,7 +11,7 @@ From this workshop we hope that you have a good grasp of the purpose of the plat
 - ran data analysis with input/output data located on
    - your project space (on CephFS; Ceph File System)
    - to/from a large scratch area on local SSD
-- launched a Notebook, installed packages within your Notebook or used existing software to run an analysis
+- launched a Notebook, installed packages within your Notebook or used existing software to run analysis
    - :ok_hand: interactive post processing feature
 - used a Singularity image with pre-installed software to run your workflows
    - :metal: software portablity and reproducability of your results
