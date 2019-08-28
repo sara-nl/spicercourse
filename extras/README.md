@@ -72,10 +72,3 @@ There are cases where different user groups work on projects with different scop
 
 Interested? Check out an overview of scientific catalogs [here](https://github.com/sara-nl/spidercourse/blob/master/extras/scientific-catalog-view.md).
 
-## Feedback
-
-We hope that you enjoyed your first journey with Spider! You probably have some feedback for the platform as well as the course and we would like to hear this :)
-
-Please fill in the survey [here]. It will take you less than 5 minutes but help us a lot!
-
-The docuemntation for the Spider platform can be found [here](http://doc.spider.surfsara.nl/en/latest/). You can contact us with any questions by writing to helpdesk@surfsara.nl.
