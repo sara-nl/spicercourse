@@ -45,7 +45,7 @@ Let us use some handy commands that can tell you which 'groups' different users 
  mkdir /project/spidercourse/Data/mydata
  ```
  
-What happened? As you are not a data manager :information_desk_person: (so not a part of spider_data group) but a user (part of spider_user group), you do not have write permissions in the project's Data directory. However, all users in this project have read permissions. This means data is managed by a 'data manager' and can be shared within the project without worrying about regular users accidentally deleting/overwriting the data for the project.
+What happened? As you are not a data manager :information_desk_person: (so not a part of spidercourse-data group) but a user (part of spidercourse-user group), you do not have write permissions in the project's Data directory. However, all users in this project have read permissions. This means data is managed by a 'data manager' and can be shared within the project without worrying about regular users accidentally deleting/overwriting the data for the project.
 
 #### 2.2 Data download
 
@@ -124,7 +124,7 @@ Let us also download the reference genome for E. coli REL606.
  mkdir /project/spidercourse/Software/mysoftware
  ```
  
-What happened? As you are not a Software manager :woman: (so not a part of the spider_sw group), you do not have write permissions in the project's Software directory. However, all users still have read permissions. This means that you or one of your colleagues in this role can install complicated software and the dependencies, maintain it, and all project users can use that uniformly. This makes life easier and is crucial for reproducability of your results. Also, apart from project wide software, individual users can install their own software (or different versions) as you shall see below. 
+What happened? As you are not a Software manager :woman: (so not a part of the spidercourse-sw group), you do not have write permissions in the project's Software directory. However, all users still have read permissions. This means that you or one of your colleagues in this role can install complicated software and the dependencies, maintain it, and all project users can use that uniformly. This makes life easier and is crucial for reproducability of your results. Also, apart from project wide software, individual users can install their own software (or different versions) as you shall see below. 
 
 #### 3.2 Miniconda installation
 
