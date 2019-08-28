@@ -26,7 +26,7 @@ Anyone who wants to start processing large data volumes (tens to hundreds of ter
 
 **Program**:
 --------
-13:00 - 13:20 - Introduction to the high throughput platform
+13:00 - 13:20 - [Introduction to the high throughput platform](https://github.com/sara-nl/spidercourse/blob/master/spider_elixir_28082019_share_lowres.pdf)
 
 13:20 - 13:30 - [Login to the platform](login-to-spider.md)
 
