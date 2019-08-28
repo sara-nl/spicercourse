@@ -34,7 +34,7 @@ The table below summarizes the permissions on the different project directories:
 > **_Food for brain:_**
 >
 > * Can you find any existing catalogs on the platform that your project `spidercourse` has access to? 
-> * You can share data with other collaborators through different project folders: `project/share`, `project/public`, `/catalog`. Can you think of scanarios that best suit each option?
+> * You can share data with other collaborators through different project folders: `project/share`, `project/public`, `/catalog`. Can you think of scenarios that best suit each option?
 
 
 
